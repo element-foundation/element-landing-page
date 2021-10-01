@@ -1,56 +1,28 @@
 {
-  "name": "neon-vue",
+  "name": "element",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "connect-history-api-fallback": "^1.6.0",
-    "core-js": "^2.6.5",
-    "eslint-loader": "^2.1.2",
-    "express": "^4.17.1",
-    "lodash": "^4.17.15",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "babel-plugin-styled-components": "^1.13.2",
+    "babel-preset-next": "^1.4.0",
+    "next": "11.1.2",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-component": "^2.8.0",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-fragment": "^1.5.1",
-    "vue-template-compiler": "^2.6.10",
-    "vue2-touch-events": "^2.0.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@types/react": "17.0.25",
+    "@types/styled-components": "^5.1.14",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "4.4.3"
+  }
 }
