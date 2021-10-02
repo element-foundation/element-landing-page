@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
-import { COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
+import { COLOR_LIGHT_BLUE, COLOR_WHITE } from "lib/colorPalette";
 
 interface LinkContainerProps {
   variant?: string;
@@ -28,7 +28,7 @@ export const LinkContainer = styled.div<LinkContainerProps>`
   h3 {
     margin: 0 0 24px 0;
     color: ${({ variant }) =>
-      variant === "white" ? COLOR_WHITE : COLOR_DARK_BLUE};
+      variant === "white" ? COLOR_WHITE : COLOR_LIGHT_BLUE};
   }
 
   a {
@@ -37,11 +37,11 @@ export const LinkContainer = styled.div<LinkContainerProps>`
     font-family: "Rubik Regular", Verdana, sans‑serif;
     transition: all 0.3s;
     color: ${({ variant }) =>
-      variant === "white" ? COLOR_WHITE : COLOR_DARK_BLUE};
+      variant === "white" ? COLOR_WHITE : COLOR_LIGHT_BLUE};
 
     &:hover {
       color: ${({ variant }) =>
-        variant !== "white" ? COLOR_WHITE : COLOR_DARK_BLUE};
+        variant !== "white" ? COLOR_WHITE : COLOR_LIGHT_BLUE};
     }
   }
 

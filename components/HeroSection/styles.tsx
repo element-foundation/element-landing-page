@@ -1,7 +1,7 @@
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
-export const ValuePropositionText = styled.p`
+export const HeroSectionText = styled.p`
   margin: 2.625rem 0 3.625rem 0;
 `;
 

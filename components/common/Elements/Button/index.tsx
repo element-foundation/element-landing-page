@@ -6,7 +6,7 @@ interface PrimaryButtonProps {
   onClick?: () => void;
   variant: string;
   hasArrow?: boolean;
-  loading?: boolean;
+  isLoading?: boolean;
 }
 
 export const PrimaryButton = ({
@@ -14,17 +14,17 @@ export const PrimaryButton = ({
   onClick,
   variant,
   hasArrow,
-  loading,
+  isLoading,
 }: PrimaryButtonProps) => {
   return (
     <PrimaryButtonContainer
       onClick={onClick}
       variant={variant}
       hasArrow={hasArrow}
-      loading={loading}
+      isLoading={isLoading}
     >
       <InlineFlex>
-        {loading ? <Spinner /> : <span>{text}</span>}
+        {isLoading ? <Spinner /> : <span>{text}</span>}
         {hasArrow && (
           <ArrowContainer>
             <svg

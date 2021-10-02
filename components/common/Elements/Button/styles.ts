@@ -9,7 +9,7 @@ import styled from "styled-components";
 interface PrimaryButtonContainerProps {
   variant: string;
   hasArrow?: boolean;
-  loading?: boolean;
+  isLoading?: boolean;
 }
 
 export const ArrowContainer = styled.div`
@@ -27,8 +27,8 @@ export const ArrowContainer = styled.div`
 export const PrimaryButtonContainer = styled.button<PrimaryButtonContainerProps>`
   background-color: ${({ variant }) =>
     variant === "primary" ? COLOR_DARK_BUTTON : COLOR_LIGHT_BUTTON};
-  padding: ${({ hasArrow, loading }) =>
-    hasArrow ? "16px 27px" : loading ? "13.5px 28px" : "16px 28px"};
+  padding: ${({ hasArrow, isLoading }) =>
+    hasArrow ? "16px 27px" : isLoading ? "13.5px 28px" : "16px 28px"};
   box-sizing: border-box;
   transition: 0.3s background-color, 0.3s transform;
   border-radius: 32px;

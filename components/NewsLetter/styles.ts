@@ -1,5 +1,5 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_BLACK, COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
+import { COLOR_BLACK, COLOR_LIGHT_BLUE, COLOR_WHITE } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -37,7 +37,7 @@ export const FlexWrapper = styled(Flex)`
 `;
 
 export const NewsLetterContainer = styled.form`
-  background: linear-gradient(180deg, ${COLOR_DARK_BLUE}, ${COLOR_WHITE});
+  background: linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_WHITE});
   padding: 54px 48px;
   border-radius: 16px;
 

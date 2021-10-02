@@ -3,7 +3,7 @@ import { Flex } from "components/common/Elements/Container/styles";
 import { devices } from "lib/devices";
 import {
   COLOR_DARK_BACKGROUND_HEADER,
-  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
   COLOR_DARK_GRAY,
   COLOR_WHITE,
 } from "lib/colorPalette";
@@ -29,7 +29,7 @@ export const StyledLink = styled.div`
 
   &:hover {
     p {
-      color: ${COLOR_DARK_BLUE};
+      color: ${COLOR_LIGHT_BLUE};
     }
   }
 `;
@@ -44,7 +44,7 @@ export const FixedHeader = styled.header<any>`
   transition: all 0.3s;
   background-color: ${COLOR_DARK_BACKGROUND_HEADER};
   box-shadow: ${({ changeColor }) =>
-    changeColor ? `0 -2px 6px ${COLOR_DARK_BLUE}` : "none"};
+    changeColor ? `0 -2px 6px ${COLOR_LIGHT_BLUE}` : "none"};
   backdrop-filter: saturate(180%) blur(5px);
 
   @media ${devices.tabletM} {

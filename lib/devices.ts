@@ -4,6 +4,7 @@ const breakPoints = {
   desktopM: "992px",
   tabletL: "1024px",
   desktopL: "1200px",
+  macBookPro: "1440px",
 };
 
 export const devices = {
@@ -12,4 +13,5 @@ export const devices = {
   desktopM: `(max-width: ${breakPoints.desktopM})`,
   tabletL: `(max-width: ${breakPoints.tabletL})`,
   desktopL: `(max-width: ${breakPoints.desktopL})`,
+  macBookPro: `(max-width: ${breakPoints.macBookPro})`,
 };

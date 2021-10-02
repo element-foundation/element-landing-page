@@ -1,5 +1,5 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_DARK_BLUE, COLOR_DARK_GRAY } from "lib/colorPalette";
+import { COLOR_LIGHT_BLUE, COLOR_DARK_GRAY } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ export const IconContainer = styled.div`
 export const StatsContent = styled.div`
   margin-left: 24px;
   p {
-    color: ${COLOR_DARK_BLUE};
+    color: ${COLOR_LIGHT_BLUE};
     margin: 0;
   }
 
@@ -32,6 +32,7 @@ export const MainContent = styled.div`
   grid-gap: 6rem;
   gap: 6rem;
   margin: 0 auto;
+  align-items: center;
 
   @media ${devices.tabletL} {
     grid-template-columns: repeat(2, 1fr);

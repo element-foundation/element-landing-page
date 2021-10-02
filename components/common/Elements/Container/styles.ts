@@ -1,26 +1,27 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
 
-export const Container = styled("div")<any>`
+export const Container = styled.div<any>`
   position: relative;
   width: auto;
   max-width: ${({ width }) => (width ? width : "80rem")};
 `;
 
-export const Flex = styled("div")<any>`
+export const Flex = styled.div<any>`
   display: flex;
   align-items: center;
   justify-content: ${({ justify }) => (justify ? justify : "space-between")};
+  flex-direction: ${({ direction }) => direction};
 `;
 
-export const HeaderWrapper = styled("div")`
+export const HeaderWrapper = styled.div`
   position: relative;
   width: auto;
   margin-right: auto;
   margin-left: auto;
 `;
 
-export const FlexWrap = styled("div")<any>`
+export const FlexWrap = styled.div<any>`
   display: flex;
   justify-content: ${({ justify }) => justify || "space-between"};
   flex-wrap: wrap;
@@ -34,6 +35,7 @@ export const Section = styled("section")<any>`
   grid-gap: calc(12rem * 0.75) 0;
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
+  overflow: hidden;
 
   @media ${devices.desktopM} {
     grid-template-columns:
@@ -58,7 +60,7 @@ export const Section = styled("section")<any>`
   }
 `;
 
-export const SectionWrapper = styled("div")`
+export const SectionWrapper = styled.div`
   display: grid;
   grid-column: 2;
   grid-template-columns: repeat(12, 1fr);
@@ -73,7 +75,7 @@ export const SectionWrapper = styled("div")`
   }
 `;
 
-export const SectionCenter = styled("div")<any>`
+export const SectionCenter = styled.div<any>`
   text-align: ${({ textAlign }) => textAlign || "center"};
   grid-column: ${({ gridColumn }) => gridColumn || "3 / 11"};
 

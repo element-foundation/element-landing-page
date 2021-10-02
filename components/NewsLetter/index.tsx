@@ -45,7 +45,7 @@ export const NewsLetter = () => {
             <PrimaryButton
               text="Subscribe"
               variant="secondary"
-              loading={isLoading}
+              isLoading={isLoading}
             />
           </ElementsContainer>
         </FlexWrapper>
