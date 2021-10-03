@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
-import { COLOR_BLACK, COLOR_DARK_BUTTON } from "lib/colorPalette";
+import { COLOR_BLACK, COLOR_LIGHT_BLUE } from "lib/colorPalette";
 
 export const ScrollUpContainer = styled("div")<any>`
   padding: 12px 13px;
@@ -10,7 +10,7 @@ export const ScrollUpContainer = styled("div")<any>`
   position: fixed;
   z-index: 10;
   cursor: pointer;
-  background-color: ${COLOR_DARK_BUTTON};
+  background-color: ${COLOR_LIGHT_BLUE};
   text-align: center;
   align-items: center;
   transition: all 0.3s ease-in-out;

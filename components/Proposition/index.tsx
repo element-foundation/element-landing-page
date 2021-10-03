@@ -17,30 +17,30 @@ import ArrowDown from "public/assets/png/Arrow-down.png";
 
 export const Proposition = () => {
   return (
-    <SectionContainer gridColumn="1/13" textAlign="start" padding="2rem 0">
+    <SectionContainer gridColumn="1/13" textAlign="start" padding="4rem 0 0 0">
       <MainContent>
         <Flex direction="column">
-          <Image src={Money} alt="" />
+          <Image src={Money} alt="SVG Illustration" />
           <PropositionText>Deposit into a pool</PropositionText>
         </Flex>
         <SaleFlex>
           <AbsoluteSVGContainer right="-30%" top="30%">
-            <Image src={Arrow} alt="" />
+            <Image src={Arrow} alt="SVG Illustration" />
           </AbsoluteSVGContainer>
           <AbsoluteMobileSVGContainer top="-40%">
-            <Image src={ArrowDown} alt="" />
+            <Image src={ArrowDown} alt="SVG Illustration" />
           </AbsoluteMobileSVGContainer>
-          <Image src={Sale} alt="" />
+          <Image src={Sale} alt="SVG Illustration" />
           <PropositionText>Select your term period</PropositionText>
           <AbsoluteSVGContainer left="-30%" top="30%">
-            <Image src={Arrow} alt="" />
+            <Image src={Arrow} alt="SVG Illustration" />
           </AbsoluteSVGContainer>
           <AbsoluteMobileSVGContainer bottom="-32%">
-            <Image src={ArrowDown} alt="" />
+            <Image src={ArrowDown} alt="SVG Illustration" />
           </AbsoluteMobileSVGContainer>
         </SaleFlex>
         <Flex direction="column">
-          <Image src={Safe} alt="" />
+          <Image src={Safe} alt="SVG Illustration" />
           <PropositionText>Redeem from our vaults</PropositionText>
         </Flex>
       </MainContent>

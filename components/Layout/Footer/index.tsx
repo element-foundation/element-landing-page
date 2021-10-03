@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
@@ -5,7 +6,8 @@ import {
   Formality,
   LinkContainer,
 } from "components/Layout/Footer/styles";
-import { ElementLogo } from "components/Layout/Header";
+
+import ElementLogo from "public/assets/svg/Logo.svg";
 
 export const Footer = () => {
   const getYear = () => new Date().getFullYear();
@@ -13,7 +15,11 @@ export const Footer = () => {
     <footer>
       <SectionContainer gridColumn="1/13" padding="5rem 0">
         <FooterMain>
-          <ElementLogo />
+          <Image
+            src={ElementLogo}
+            alt="Logo of Element Finance"
+            layout="fixed"
+          />
           <LinkContainer variant="white">
             <h3>Quick Links</h3>
             <Link href="https://google.com/" passHref={true}>

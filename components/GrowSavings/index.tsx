@@ -6,12 +6,10 @@ import {
   FlexWrapper,
   ContentWrapper,
   SectionTitle,
-  LinearSVGContainer,
   GrowSavingsWrapper,
   AbsoluteSVGContainer,
 } from "components/GrowSavings/styles";
 
-import LinearSVG from "public/assets/svg/DecorativeLine.svg";
 import SemiCircle from "public/assets/svg/SemiCircle.svg";
 import SemiO from "public/assets/svg/SemiO.svg";
 import GrowSavingSVG from "public/assets/svg/GrowSavingSVG.svg";
@@ -19,23 +17,23 @@ import GrayBlock from "public/assets/svg/GrayBlock.svg";
 
 export const GrowSavings = () => {
   return (
-    <GrowSavingsWrapper>
-      <LinearSVGContainer>
-        <Image src={LinearSVG} alt="" />
-      </LinearSVGContainer>
-      <AbsoluteSVGContainer right="0" top="-2rem">
-        <Image src={SemiCircle} alt="" />
+    <GrowSavingsWrapper id="liquidity">
+      <AbsoluteSVGContainer right="0" top="-6rem" className="decorative-line" line={true}>
+        <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <AbsoluteSVGContainer right="0" bottom="4rem">
-        <Image src={SemiO} alt="" />
+      <AbsoluteSVGContainer right="0" top="-2rem">
+        <Image src={SemiCircle} alt="SVG Illustration" />
+      </AbsoluteSVGContainer>
+      <AbsoluteSVGContainer right="0" bottom="1rem">
+        <Image src={SemiO} alt="SVG Illustration" />
       </AbsoluteSVGContainer>
       <AbsoluteSVGContainer left="0" bottom="4rem">
-        <Image src={GrayBlock} alt="" />
+        <Image src={GrayBlock} alt="SVG Illustration" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13">
+      <SectionContainer gridColumn="1/13" padding="4rem 0">
         <FlexWrapper>
           <div>
-            <Image src={GrowSavingSVG} alt="" />
+            <Image src={GrowSavingSVG} alt="SVG Illustration" />
           </div>
           <ContentWrapper>
             <SectionTitle variant="primary">Grow your savings</SectionTitle>

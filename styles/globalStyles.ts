@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { devices } from "lib/devices";
 import {
   COLOR_DARK_BACKGROUND,
@@ -118,4 +118,45 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1rem;
       font-family: 'Rubik Regular', Verdana, sans‑serif;
     }
+`;
+
+export const AnimateSlideBurger = styled.div`
+  &.burgerslide-transition-enter {
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+  }
+  &.burgerslide-transition-enter-active {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transition: transform 0.4s ease-in;
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    -moz-transition: -moz-transform 0.4s ease-in;
+  }
+  &.burgerslide-transition-exit {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+  }
+  &.burgerslide-transition-exit-active {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    -moz-transition: -moz-transform 0.5s ease-in;
+  }
+`;
+
+export const PageHideOuterScroll = createGlobalStyle<any>`
+  body {
+    overflow-y: ${(p) => (p.shouldHide ? "hidden" : "auto")};       
+   
+  }
+
+  .main {
+    opacity: ${(p) => (p.shouldHide ? "0.25" : "1")};    
+    transition: all 0.25s cubic-bezier(0.8, 0, 0.2, 1);
+  }
 `;

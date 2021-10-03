@@ -1,4 +1,5 @@
 import { ServerStyleSheet } from "styled-components";
+// eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
   Html,
   Head,

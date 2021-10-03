@@ -17,7 +17,7 @@ export const StatsSection = () => {
       <MainContent>
         <Flex>
           <IconContainer>
-            <Image src={TotalValue} alt="" />
+            <Image src={TotalValue} alt="SVG Illustration" />
           </IconContainer>
           <StatsContent>
             <h2>$70M</h2>
@@ -26,7 +26,7 @@ export const StatsSection = () => {
         </Flex>
         <Flex>
           <IconContainer>
-            <Image src={Liquidity} alt="" />
+            <Image src={Liquidity} alt="SVG Illustration" />
           </IconContainer>
           <StatsContent>
             <h2>5M+</h2>
@@ -35,7 +35,7 @@ export const StatsSection = () => {
         </Flex>
         <Flex>
           <IconContainer>
-            <Image src={Globe} alt="" />
+            <Image src={Globe} alt="SVG Illustration" />
           </IconContainer>
           <StatsContent>
             <h2>6+</h2>

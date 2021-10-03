@@ -61,7 +61,46 @@ export const FixedHeader = styled.header<any>`
 `;
 
 export const MenuItemContainer = styled(Flex)`
-  @media ${devices.desktopL} {
+  @media (max-width: 1200px) {
     display: none;
+  }
+`;
+
+export const NavigationPrimary = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+
+  p {
+    font-size: 30px;
+    margin: 2rem 0;
+  }
+  button {
+    margin-top: 2rem;
+    span {
+      font-size: 30px;
+    }
+  }
+
+  @media ${devices.mobileL} {
+    column-count: 1;
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 25px;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+  }
+`;
+
+export const BurgerMenuContainer = styled.div`
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
   }
 `;

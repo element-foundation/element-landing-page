@@ -5,6 +5,8 @@ import SEO from "next-seo.config";
 
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
+import { Header } from "components/Layout/Header";
+import { Footer } from "components/Layout/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,8 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <GlobalStyle />
+      <Header />
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <div className="main">
+        <Component {...pageProps} />
+      </div>
+      <Footer />
     </>
   );
 }

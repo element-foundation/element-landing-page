@@ -1,22 +1,26 @@
 import ScrollToTop from "components/common/ScrollToTop";
 import { HeroSection } from "components/HeroSection";
-import { Header } from "components/Layout/Header";
-import { Footer } from "components/Layout/Footer";
 import { StatsSection } from "components/StatsSection";
 import { NewsLetter } from "components/NewsLetter";
 import { GrowSavings } from "components/GrowSavings";
 import { Proposition } from "components/Proposition";
+import { OurVaults } from "components/OurVaults";
+import { BuildElement } from "components/BuildElement";
+import { TreasuryManagement } from "components/TreasuryManagement";
+import { Investors } from "components/Investors";
 
 const Home = () => (
   <>
     <ScrollToTop />
-    <Header />
     <HeroSection />
     <StatsSection />
     <GrowSavings />
     <Proposition />
+    <OurVaults />
+    <BuildElement />
+    <TreasuryManagement />
+    <Investors />
     <NewsLetter />
-    <Footer />
   </>
 );
 

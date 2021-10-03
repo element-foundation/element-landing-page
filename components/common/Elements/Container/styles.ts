@@ -29,15 +29,17 @@ export const FlexWrap = styled.div<any>`
 
 export const Section = styled("section")<any>`
   display: grid;
-  grid-template-columns:
-    minmax(6rem, auto) minmax(0, 78rem)
-    minmax(6rem, auto);
+  grid-template-columns: ${({ gridTemplate }) =>
+    gridTemplate === "large"
+      ? `minmax(0rem, auto) minmax(0, 86rem) minmax(0rem, auto)`
+      : `minmax(6rem, auto) minmax(0, 78rem) minmax(6rem, auto)`};
   grid-gap: calc(12rem * 0.75) 0;
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
   overflow: hidden;
+  overflow: ${({ hasOverflow }) => (!hasOverflow ? "hidden" : "initial")};
 
-  @media ${devices.desktopM} {
+  @media ${devices.tabletL} {
     grid-template-columns:
       minmax(4.5rem, auto) minmax(0, 78rem)
       minmax(4.5rem, auto);

@@ -1,6 +1,6 @@
 import {
   COLOR_BLACK,
-  COLOR_DARK_BUTTON,
+  COLOR_LIGHT_BLUE,
   COLOR_LIGHT_BUTTON,
   COLOR_WHITE,
 } from "lib/colorPalette";
@@ -26,7 +26,7 @@ export const ArrowContainer = styled.div`
 
 export const PrimaryButtonContainer = styled.button<PrimaryButtonContainerProps>`
   background-color: ${({ variant }) =>
-    variant === "primary" ? COLOR_DARK_BUTTON : COLOR_LIGHT_BUTTON};
+    variant === "primary" ? COLOR_LIGHT_BLUE : COLOR_LIGHT_BUTTON};
   padding: ${({ hasArrow, isLoading }) =>
     hasArrow ? "16px 27px" : isLoading ? "13.5px 28px" : "16px 28px"};
   box-sizing: border-box;

@@ -12,7 +12,7 @@ import HeroBlock from "public/assets/svg/HeroBlock.svg";
 
 export const HeroSection = () => {
   return (
-    <SectionContainer padding="18rem 0" gridColumn="1/13" textAlign="start">
+    <SectionContainer padding="18rem 0" gridColumn="1/13" textAlign="start" id="fixed-apr">
       <ContentWrapper>
         <h1>
           Defi’s most secure fixed rate <br />
@@ -33,10 +33,10 @@ export const HeroSection = () => {
         </Link>
       </ContentWrapper>
       <SVGContainer zIndex="5">
-        <Image src={HeroBlock} alt="" />
+        <Image src={HeroBlock} alt="SVG Illustration" />
       </SVGContainer>
       <SVGContainer zIndex="0">
-        <Image src={HeroBlock} alt="" />
+        <Image src={HeroBlock} alt="SVG Illustration" />
       </SVGContainer>
     </SectionContainer>
   );
