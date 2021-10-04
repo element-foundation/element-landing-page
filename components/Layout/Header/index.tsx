@@ -83,7 +83,7 @@ export const Header = () => {
 
   return (
     <FixedHeader changeColor={changeColor}>
-      <SectionContainer gridColumn="1/13" gridTemplate="large" width="auto">
+      <SectionContainer gridColumn="1/13" width="auto">
         <HeaderWrapper>
           <Flex>
             <Image

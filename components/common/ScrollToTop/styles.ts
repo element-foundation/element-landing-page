@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { devices } from "lib/devices";
 import { COLOR_BLACK, COLOR_LIGHT_BLUE } from "lib/colorPalette";
 
-export const ScrollUpContainer = styled("div")<any>`
+export const ScrollUpContainer = styled.div<any>`
   padding: 12px 13px;
   position: fixed;
   right: 30px;

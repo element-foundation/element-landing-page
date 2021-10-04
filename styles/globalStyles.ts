@@ -66,7 +66,8 @@ export const GlobalStyle = createGlobalStyle`
 
       
       @media ${devices.mobileL} {
-        font-size: 1.75rem;      
+        font-size: 1.75rem;  
+        line-height: 55px;  
       }
 
       @media ${devices.desktopM} {

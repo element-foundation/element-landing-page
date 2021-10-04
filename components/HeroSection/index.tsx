@@ -8,11 +8,16 @@ import {
   ContentWrapper,
 } from "components/HeroSection/styles";
 
-import HeroBlock from "public/assets/svg/HeroBlock.svg";
+import HeroStrobe from "public/assets/svg/HeroStrobe.svg";
 
 export const HeroSection = () => {
   return (
-    <SectionContainer padding="18rem 0" gridColumn="1/13" textAlign="start" id="fixed-apr">
+    <SectionContainer
+      padding="18rem 0"
+      gridColumn="1/13"
+      textAlign="start"
+      id="fixed-apr"
+    >
       <ContentWrapper>
         <h1>
           Defi’s most secure fixed rate <br />
@@ -33,10 +38,10 @@ export const HeroSection = () => {
         </Link>
       </ContentWrapper>
       <SVGContainer zIndex="5">
-        <Image src={HeroBlock} alt="SVG Illustration" />
+        <Image src={HeroStrobe} alt="SVG Illustration" />
       </SVGContainer>
       <SVGContainer zIndex="0">
-        <Image src={HeroBlock} alt="SVG Illustration" />
+        <Image src={HeroStrobe} alt="SVG Illustration" />
       </SVGContainer>
     </SectionContainer>
   );

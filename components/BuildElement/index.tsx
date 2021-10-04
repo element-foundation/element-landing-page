@@ -10,7 +10,7 @@ import {
 import {
   FlexWrapper,
   BuildElementWrapper,
-  Circle
+  Circle,
 } from "components/BuildElement/styles";
 
 import CircleSquare from "public/assets/svg/CircleSquare.svg";
@@ -18,7 +18,7 @@ import CircleSquare from "public/assets/svg/CircleSquare.svg";
 export const BuildElement = () => {
   return (
     <BuildElementWrapper id="build">
-      <SectionContainer gridColumn="1/13" padding="1rem 0 0 0">
+      <SectionContainer gridColumn="1/13" padding="3rem 0 0 0">
         <FlexWrapper>
           <ContentWrapper>
             <SectionTitle variant="primary">Build on Element</SectionTitle>
@@ -33,7 +33,7 @@ export const BuildElement = () => {
               </div>
             </Link>
           </ContentWrapper>
-          <div style={{ position: "relative" }}>
+          <div className="image-container">
             <Image src={CircleSquare} alt="SVG Element" />
             <Circle size="small" />
           </div>
@@ -43,7 +43,6 @@ export const BuildElement = () => {
         right="0"
         bottom="-6rem"
         className="decorative-line"
-        line={true}
       >
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>

@@ -10,7 +10,7 @@ const motion = () => keyframes`
   }
 `;
 
-export const RippleSpinner = styled("div")`
+export const RippleSpinner = styled.div`
   position: relative;
   width: 24px;
   height: 24px;
@@ -82,7 +82,7 @@ export const RippleSpinner = styled("div")`
   }
 `;
 
-export const SpinnerContainer = styled("div")<any>`
+export const SpinnerContainer = styled.div`
   width: 100%;
   height: auto;
   display: flex;

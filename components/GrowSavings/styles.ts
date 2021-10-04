@@ -12,7 +12,7 @@ export interface AbsoluteProps {
   right?: string;
   top?: string;
   bottom?: string;
-  line?: boolean;
+  height?: string;
 }
 
 export const FlexWrapper = styled(Flex)`
@@ -20,14 +20,30 @@ export const FlexWrapper = styled(Flex)`
   margin: 0 auto;
   flex-direction: row;
 
-  @media ${devices.tabletL} {
-    flex-direction: column;
+  @media ${devices.tabletM} {
+    flex-direction: column-reverse;
+
+    .image-container {
+      margin-top: 6rem;
+    }
+  }
+
+  .image-container {
+    @media ${devices.tabletL} {
+      max-width: 30vw;
+      width: 100%;
+    }
+
+    @media ${devices.tabletM} {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 `;
 
 export const ContentWrapper = styled.div`
-  max-width: 33rem;
   width: 100%;
+  max-width: 33rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,6 +52,15 @@ export const ContentWrapper = styled.div`
     text-align: start;
     margin-bottom: 3rem;
     margin-top: 0.5rem;
+  }
+
+  @media ${devices.tabletL} {
+    max-width: 27rem;
+  }
+
+  @media ${devices.tabletM} {
+    margin-right: auto;
+    max-width: 100%;
   }
 `;
 
@@ -47,11 +72,17 @@ export const SectionTitle = styled.h3<SectionTitleProps>`
   @media ${devices.desktopM} {
     font-size: 2.275rem;
   }
+
+  @media ${devices.tabletM} {
+    text-align: start;
+  }
 `;
 
 export const GrowSavingsWrapper = styled.section`
   position: relative;
   padding: 18rem 0 0 0;
+  max-width: 1920px;
+  margin: 0 auto;
 
   .decorative-line {
     width: 100%;
@@ -59,6 +90,14 @@ export const GrowSavingsWrapper = styled.section`
     justify-content: center;
     display: flex;
     pointer-events: none;
+
+    @media ${devices.tabletL} {
+      top: -15%;
+    }
+
+    @media ${devices.tabletM} {
+      top: -25%;
+    }
   }
 
   .DecorativeLine {
@@ -80,6 +119,18 @@ export const GrowSavingsWrapper = styled.section`
       padding: 0;
     }
   }
+
+  @media ${devices.tabletM} {
+    padding: 6.6rem 0 0 0;
+  }
+
+  @media ${devices.mobileL} {
+    padding: 5rem 0 0;
+
+    .gray-block {
+      display: none;
+    }
+  }
 `;
 
 export const AbsoluteSVGContainer = styled.div<AbsoluteProps>`
@@ -88,5 +139,5 @@ export const AbsoluteSVGContainer = styled.div<AbsoluteProps>`
   right: ${({ right }) => right};
   top: ${({ top }) => top};
   bottom: ${({ bottom }) => bottom};
-  height: ${({ line }) => line && "50%"};
+  height: ${({ height }) => height};
 `;

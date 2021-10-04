@@ -23,14 +23,12 @@ export const GridContainer = styled.div<any>`
 
   @media ${devices.desktopM} {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem 3rem;
-    gap: 4rem 3rem;
+    grid-gap: 5rem 3rem;
+    gap: 5rem 3rem;
   }
 
   @media ${devices.mobileL} {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem 3rem;
-    gap: 2rem 3rem;
   }
 `;
 
@@ -63,11 +61,11 @@ export const VaultsItemContainer = styled.div`
   }
 `;
 
-export const ValuessWrapper = styled.section`
+export const ValuesWrapper = styled.section`
   position: relative;
-  padding: 16rem 0 0 0;
+  padding: 26rem 0 18rem 0;
 
-  .DecorativeLineValues {
+  .DecorativeLine {
     width: 100%;
     background-image: url("./assets/svg/DecorativeLineValues.svg");
     background-size: cover;
@@ -86,7 +84,35 @@ export const ValuessWrapper = styled.section`
     }
   }
 
-  .DecorativeLineValuesBottom {
+  @media ${devices.tabletL} {
+    padding: 20rem 0 18rem 0;
+    .first-line {
+      top: 0;
+    }
+
+    .second-line {
+      bottom: 10%;
+    }
+  }
+
+  @media ${devices.tabletM} {
+    padding: 0;
+    .first-line {
+      top: -20%;
+    }
+
+    .second-line {
+      bottom: -5%;
+    }
+  }
+
+  @media ${devices.mobileL} {
+    .first-line {
+      top: -24%;
+    }
+  }
+
+  .DecorativeLineBottom {
     width: 100%;
     background-image: url("./assets/svg/DecorativeLineValuesBottom.svg");
     background-size: cover;

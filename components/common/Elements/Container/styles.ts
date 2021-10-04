@@ -29,10 +29,7 @@ export const FlexWrap = styled.div<any>`
 
 export const Section = styled("section")<any>`
   display: grid;
-  grid-template-columns: ${({ gridTemplate }) =>
-    gridTemplate === "large"
-      ? `minmax(0rem, auto) minmax(0, 86rem) minmax(0rem, auto)`
-      : `minmax(6rem, auto) minmax(0, 78rem) minmax(6rem, auto)`};
+  grid-template-columns: minmax(6rem, auto) minmax(0, 78rem) minmax(6rem, auto);
   grid-gap: calc(12rem * 0.75) 0;
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
@@ -49,6 +46,7 @@ export const Section = styled("section")<any>`
     grid-template-columns:
       minmax(3rem, auto) minmax(0, 78rem)
       minmax(3rem, auto);
+    padding: ${({ padding }) => padding / 1.5 || "6.6rem 0"};
   }
 
   @media ${devices.mobileL} {
@@ -56,7 +54,7 @@ export const Section = styled("section")<any>`
     grid-template-columns:
       minmax(1.5rem, auto) minmax(0, 78rem)
       minmax(1.5rem, auto);
-    padding: 6rem 0;
+    padding: 5rem 0;
     grid-gap: 3rem 0;
     gap: 3rem 0;
   }

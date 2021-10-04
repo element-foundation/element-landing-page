@@ -3,7 +3,7 @@ import { devices } from "lib/devices";
 import { COLOR_DARK_BACKGROUND, COLOR_LIGHT_BLUE } from "lib/colorPalette";
 import { AnimateSlideBurger } from "styles/globalStyles";
 
-export const BurgerSidebarWrapper = styled(AnimateSlideBurger)<any>`
+export const BurgerSidebarWrapper = styled(AnimateSlideBurger)`
   width: 100%;
   height: 100%;
   display: block;

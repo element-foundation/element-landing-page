@@ -30,6 +30,10 @@ export const FlexWrapper = styled(Flex)`
     justify-content: center;
     align-items: center;
     margin-top: 12%;
+
+    @media ${devices.tabletM} {
+      margin-top: 0;
+    }
   }
 
   @media (max-width: 1440px) {
@@ -58,11 +62,15 @@ export const ContentWrapper = styled.div`
 
   @media ${devices.tabletM} {
     margin-top: 0%;
-    max-width: auto;
+    max-width: 100%;
 
     h3 {
       max-width: 27rem;
     }
+  }
+
+  @media ${devices.mobileL} {
+    margin-top: 12%;
   }
 
   p {

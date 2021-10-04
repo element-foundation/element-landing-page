@@ -7,23 +7,30 @@ export const HeroSectionText = styled.p`
 
 export const ContentWrapper = styled.div`
   max-width: 34rem;
+
+  @media ${devices.mobileL} {
+    padding-top: 2rem;
+  }
 `;
 
 export const SVGContainer = styled.div<any>`
   position: absolute;
   top: ${({ zIndex }) => (zIndex === "5" ? "50%" : "45%")};
-  right: ${({ zIndex }) => (zIndex === "5" ? "25%" : "-15%")};
+  right: ${({ zIndex }) => zIndex !== "5" && "-250px"};
   z-index: ${({ zIndex }) => zIndex};
-  overflow: ${({ zIndex }) => zIndex !== "5" && "hidden"};
   pointer-events: none;
-  max-width: 100%;
-  max-height: 100%;
-  max-width: fit-content;
+
+  @media ${devices.desktopL} {
+    right: ${({ zIndex }) => (zIndex !== "5" ? "-32vw" : "3vw")};
+    overflow: hidden;
+  }
+
+  @media ${devices.tabletL} {
+    right: ${({ zIndex }) => (zIndex !== "5" ? "-50vw" : "-8vw")};
+    overflow: hidden;
+  }
 
   @media ${devices.tabletM} {
-    display: ${({ zIndex }) => zIndex !== "5" && "none"};
-    top: ${({ zIndex }) => zIndex === "5" && "50%"};
-    right: ${({ zIndex }) => zIndex === "5" && "25%"};
-    overflow: hidden;
+    display: none;
   }
 `;

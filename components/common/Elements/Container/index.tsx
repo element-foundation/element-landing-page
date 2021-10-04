@@ -6,7 +6,6 @@ interface ContainerProps {
   textAlign?: string;
   padding?: string;
   width?: string;
-  gridTemplate?: string;
   hasOverflow?: boolean;
   id?: string;
 }
@@ -17,17 +16,11 @@ export const SectionContainer = ({
   textAlign,
   padding,
   width,
-  gridTemplate,
   hasOverflow,
   id,
 }: ContainerProps) => {
   return (
-    <Section
-      padding={padding}
-      gridTemplate={gridTemplate}
-      hasOverflow={hasOverflow}
-      id={id}
-    >
+    <Section padding={padding} hasOverflow={hasOverflow} id={id}>
       <SectionWrapper>
         <SectionCenter textAlign={textAlign} gridColumn={gridColumn}>
           <Container width={width}>{children}</Container>

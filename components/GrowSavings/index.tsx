@@ -18,21 +18,26 @@ import GrayBlock from "public/assets/svg/GrayBlock.svg";
 export const GrowSavings = () => {
   return (
     <GrowSavingsWrapper id="liquidity">
-      <AbsoluteSVGContainer right="0" top="-6rem" className="decorative-line" line={true}>
+      <AbsoluteSVGContainer
+        right="0"
+        top="-6rem"
+        className="decorative-line"
+        height="50%"
+      >
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
       <AbsoluteSVGContainer right="0" top="-2rem">
         <Image src={SemiCircle} alt="SVG Illustration" />
       </AbsoluteSVGContainer>
-      <AbsoluteSVGContainer right="0" bottom="1rem">
+      <AbsoluteSVGContainer right="0" bottom="1rem" className="gray-block">
         <Image src={SemiO} alt="SVG Illustration" />
       </AbsoluteSVGContainer>
-      <AbsoluteSVGContainer left="0" bottom="4rem">
+      <AbsoluteSVGContainer left="0" bottom="0" className="gray-block">
         <Image src={GrayBlock} alt="SVG Illustration" />
       </AbsoluteSVGContainer>
       <SectionContainer gridColumn="1/13" padding="4rem 0">
         <FlexWrapper>
-          <div>
+          <div className="image-container">
             <Image src={GrowSavingSVG} alt="SVG Illustration" />
           </div>
           <ContentWrapper>

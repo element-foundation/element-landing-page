@@ -16,8 +16,31 @@ export const FlexWrapper = styled(Flex)`
     max-width: 29rem;
   }
 
+  .image-container {
+    position: relative;
+
+    @media ${devices.tabletL} {
+      max-width: 30vw;
+      width: 100%;
+    }
+
+    @media ${devices.tabletM} {
+      max-width: 60%;
+      width: 100%;
+    }
+  }
+
   @media ${devices.tabletM} {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    margin-top: 6rem;
+
+    .image-container {
+      margin-bottom: 4rem;
+    }
+
+    ${ContentWrapper} {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -31,6 +54,14 @@ export const BuildElementWrapper = styled.section`
     justify-content: center;
     display: flex;
     pointer-events: none;
+
+    @media ${devices.tabletL} {
+      bottom: -8rem;
+    }
+
+    @media ${devices.tabletM} {
+      display: none;
+    }
   }
 
   .DecorativeLine {
@@ -61,7 +92,7 @@ export const Circle = styled.div<CircleProps>`
   max-width: ${({ size }) => (size === "small" ? "78%" : "686px")};
   max-height: ${({ size }) => (size === "small" ? "75%" : "686px")};
   left: ${({ size }) => (size !== "small" ? "46%" : "20%")};
-  top: ${({ size }) => size === "small" && "10px"};
+  top: ${({ size }) => size === "small" && "5px"};
   bottom: ${({ size }) => size !== "small" && "86%"};
   border-radius: 50%;
 

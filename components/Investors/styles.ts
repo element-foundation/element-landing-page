@@ -1,3 +1,4 @@
+import { devices } from "lib/devices";
 import styled from "styled-components";
 
 export const InvestorsWrapper = styled.div`
@@ -30,5 +31,17 @@ export const InvestorsWrapper = styled.div`
       background-position: center;
       padding: 0;
     }
+  }
+
+  @media ${devices.tabletL} {
+    padding: 12rem 0;
+  }
+
+  @media ${devices.tabletM} {
+    padding: 6.6rem 0 0;
+  }
+
+  @media ${devices.mobileL} {
+    padding: 5rem 0 0;
   }
 `;

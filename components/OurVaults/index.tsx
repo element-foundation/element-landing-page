@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
@@ -6,7 +5,7 @@ import {
 } from "components/GrowSavings/styles";
 import {
   GridContainer,
-  ValuessWrapper,
+  ValuesWrapper,
   VaultsContainer,
 } from "components/OurVaults/styles";
 import { VaultsItem } from "components/OurVaults/VaultsItem";
@@ -62,16 +61,16 @@ const vaultData = [
 
 export const OurVaults = () => {
   return (
-    <ValuessWrapper>
+    <ValuesWrapper>
       <AbsoluteSVGContainer
         right="0"
         top="3rem"
-        className="decorative-line"
-        line={true}
+        className="decorative-line first-line"
+        height="50%"
       >
-        <div className="DecorativeLineValues" />
+        <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13" padding="10rem 0 18rem 0" id="pools">
+      <SectionContainer gridColumn="1/13" padding="0" id="pools">
         <VaultsContainer>
           <SectionTitle variant="primary">Our vaults</SectionTitle>
           <GridContainer>
@@ -84,11 +83,10 @@ export const OurVaults = () => {
       <AbsoluteSVGContainer
         right="0"
         bottom="-2rem"
-        className="decorative-line"
-        line={true}
+        className="decorative-line second-line"
       >
-        <div className="DecorativeLineValuesBottom" />
+        <div className="DecorativeLineBottom" />
       </AbsoluteSVGContainer>
-    </ValuessWrapper>
+    </ValuesWrapper>
   );
 };
