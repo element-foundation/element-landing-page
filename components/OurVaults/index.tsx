@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
@@ -71,14 +72,16 @@ export const OurVaults = () => {
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
       <SectionContainer gridColumn="1/13" padding="0" id="pools">
-        <VaultsContainer>
-          <SectionTitle variant="primary">Our vaults</SectionTitle>
-          <GridContainer>
-            {vaultData.map((item: VaultProps, id: number) => {
-              return <VaultsItem key={id} item={item} />;
-            })}
-          </GridContainer>
-        </VaultsContainer>
+        <Fade duration={2500} delay={200} triggerOnce>
+          <VaultsContainer>
+            <SectionTitle variant="primary">Our vaults</SectionTitle>
+            <GridContainer>
+              {vaultData.map((item: VaultProps, id: number) => {
+                return <VaultsItem key={id} item={item} />;
+              })}
+            </GridContainer>
+          </VaultsContainer>
+        </Fade>
       </SectionContainer>
       <AbsoluteSVGContainer
         right="0"

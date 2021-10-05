@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
@@ -20,7 +21,7 @@ import Rarestone from "public/assets/png/Investors/Rarestone.png";
 import a16z from "public/assets/svg/Investors/a16z.svg";
 import scalar_capital from "public/assets/png/Investors/scalar_capital.png";
 import femboy_capital from "public/assets/svg/Investors/femboy_capital.svg";
-import placeholder from "public/assets/png/Investors/placeholder.png";
+import placeholder from "public/assets/png/Investors/Placeholder.png";
 import consensys from "public/assets/svg/Investors/consensys.svg";
 import yc from "public/assets/png/Investors/yc.png";
 import SVAngel from "public/assets/png/Investors/SVAngel.png";
@@ -110,21 +111,27 @@ export const Investors = () => {
       <AbsoluteSVGContainer right="0" top="6rem" className="decorative-line">
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13" textAlign="center" padding="0 0 4rem 0">
-        <SectionTitle variant="primary">Our investors</SectionTitle>
-        <GridContainer>
-          {investorsData.map((item, id) => {
-            return (
-              <CardWrapper key={id}>
-                <Image
-                  src={item.investorImage}
-                  alt={`Logo of ${item.investorTitle}`}
-                  height={item?.height}
-                />
-              </CardWrapper>
-            );
-          })}
-        </GridContainer>
+      <SectionContainer
+        gridColumn="1/13"
+        textAlign="center"
+        padding="0 0 4rem 0"
+      >
+        <Fade duration={2500} delay={200} triggerOnce>
+          <SectionTitle variant="primary">Our investors</SectionTitle>
+          <GridContainer>
+            {investorsData.map((item, id) => {
+              return (
+                <CardWrapper key={id}>
+                  <Image
+                    src={item.investorImage}
+                    alt={`Logo of ${item.investorTitle}`}
+                    height={item?.height}
+                  />
+                </CardWrapper>
+              );
+            })}
+          </GridContainer>
+        </Fade>
       </SectionContainer>
     </InvestorsWrapper>
   );

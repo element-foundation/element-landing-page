@@ -1,7 +1,10 @@
+import { Slide } from "react-awesome-reveal";
 import Image from "next/image";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
 import { ExternalLink } from "components/common/Elements/ExternalLink";
+import { FlexWrapper } from "components/GrowSavings/styles";
+import { Break } from "components/NewsLetter/styles";
 import {
   HeroSectionText,
   SVGContainer,
@@ -9,6 +12,7 @@ import {
 } from "components/HeroSection/styles";
 
 import HeroStrobe from "public/assets/svg/HeroStrobe.svg";
+import GrowSavingSVG from "public/assets/svg/GrowSavingSVG.svg";
 
 export const HeroSection = () => {
   return (
@@ -18,25 +22,33 @@ export const HeroSection = () => {
       textAlign="start"
       id="fixed-apr"
     >
-      <ContentWrapper>
-        <h1>
-          Defi’s most secure fixed rate <br />
-          protocol
-        </h1>
-        <HeroSectionText>
-          Element is an open source protocol for fixed and variable yield
-          markets.
-        </HeroSectionText>
-        <ExternalLink href="https://google.com/">
-          <div>
-            <PrimaryButton
-              variant="primary"
-              text="Start earning"
-              hasArrow={true}
-            />
+      <Slide direction="left" duration={2000} triggerOnce>
+        <FlexWrapper heroSection={true}>
+          <ContentWrapper>
+            <h1>
+              Defi’s largest fixed rate <Break />
+              protocol
+            </h1>
+            <HeroSectionText>
+              Element is an open source protocol for fixed and variable yield
+              markets.
+            </HeroSectionText>
+            <ExternalLink href="https://google.com/">
+              <div>
+                <PrimaryButton
+                  variant="primary"
+                  text="Start earning"
+                  hasArrow={true}
+                />
+              </div>
+            </ExternalLink>
+          </ContentWrapper>
+          {/* Placeholder svg that needs to be changed*/}
+          <div className="image-container">
+            <Image src={GrowSavingSVG} alt="SVG Illustration" />
           </div>
-        </ExternalLink>
-      </ContentWrapper>
+        </FlexWrapper>
+      </Slide>
       <SVGContainer zIndex="5">
         <Image src={HeroStrobe} alt="SVG Illustration" />
       </SVGContainer>

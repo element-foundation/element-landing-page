@@ -16,12 +16,13 @@ export interface AbsoluteProps {
 }
 
 export const FlexWrapper = styled(Flex)`
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: ${({ heroSection }) => (heroSection ? "72rem" : "80rem")};
+  margin: ${({ heroSection }) => (heroSection ? "0 auto 0 0" : "0 auto")};
   flex-direction: row;
 
   @media ${devices.tabletM} {
-    flex-direction: column-reverse;
+    flex-direction: ${({ heroSection }) =>
+      heroSection ? "column" : "column-reverse"};
 
     .image-container {
       margin-top: 6rem;

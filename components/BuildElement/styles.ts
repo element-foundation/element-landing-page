@@ -9,33 +9,41 @@ interface CircleProps {
 
 export const FlexWrapper = styled(Flex)`
   max-width: 72rem;
-  margin: 0 auto;
+  height: 600px;
   flex-direction: row;
-
-  ${ContentWrapper} {
-    max-width: 29rem;
-  }
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
 
   .image-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
     position: relative;
+  }
 
-    @media ${devices.tabletL} {
-      max-width: 30vw;
-      width: 100%;
-    }
-
-    @media ${devices.tabletM} {
-      max-width: 60%;
-      width: 100%;
+  @media ${devices.tabletL} {
+    .image-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
+  
   @media ${devices.tabletM} {
-    flex-direction: column-reverse;
-    margin-top: 6rem;
+    flex-direction: column;
+    margin-top: 12rem;
+    height: 100%;
 
     .image-container {
-      margin-bottom: 4rem;
+      height: 100%;
+      margin: 10rem 0 4rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     ${ContentWrapper} {
@@ -89,17 +97,30 @@ export const Circle = styled.div<CircleProps>`
   position: absolute;
   width: 100%;
   height: 100%;
-  max-width: ${({ size }) => (size === "small" ? "78%" : "686px")};
-  max-height: ${({ size }) => (size === "small" ? "75%" : "686px")};
-  left: ${({ size }) => (size !== "small" ? "46%" : "20%")};
-  top: ${({ size }) => size === "small" && "5px"};
+  max-width: ${({ size }) => (size === "small" ? "300px" : "686px")};
+  max-height: ${({ size }) => (size === "small" ? "300px" : "686px")};
+  left: ${({ size }) => (size !== "small" ? "50%" : "76%")};
+  top: ${({ size }) => size === "small" && "-55%"};
   bottom: ${({ size }) => size !== "small" && "86%"};
   border-radius: 50%;
-
   background: conic-gradient(
     from 180deg at 50% 50%,
     rgba(255, 255, 255, 0.16) 0deg,
     rgba(255, 255, 255, 0) 360deg
   );
   transform: rotate(90deg);
+
+  @media ${devices.tabletL} {
+    left: ${({ size }) => size === "small" && "55%"};
+    top: ${({ size }) => size === "small" && "-8%"};
+  }
+
+  @media ${devices.tabletM} {
+    left: ${({ size }) => size === "small" && "58%"};
+    top: ${({ size }) => size === "small" && "-48%"};
+  }
+
+  @media ${devices.mobileL} {
+    display: ${({ size }) => size === "small" && "none"};
+  }
 `;

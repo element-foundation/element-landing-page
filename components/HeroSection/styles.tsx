@@ -6,10 +6,18 @@ export const HeroSectionText = styled.p`
 `;
 
 export const ContentWrapper = styled.div`
-  max-width: 34rem;
+  max-width: 33rem;
+
+  @media ${devices.tabletL} {
+    max-width: 27rem;
+  }
 
   @media ${devices.mobileL} {
-    padding-top: 2rem;
+    padding-top: 4rem;
+  }
+
+  @media ${devices.tabletM} {
+    max-width: 100%;
   }
 `;
 

@@ -59,7 +59,7 @@ export const LinkContainer = styled.div`
     color: ${COLOR_WHITE};
 
     &:hover {
-      ${COLOR_LIGHT_BLUE};
+      color: ${COLOR_LIGHT_BLUE};
     }
   }
 

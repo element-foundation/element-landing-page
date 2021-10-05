@@ -42,11 +42,11 @@ export const NewsLetterContainer = styled.form`
   border-radius: 16px;
 
   @media ${devices.desktopL} {
-    padding: 40px 35px;
+    padding: 40px 48px;
   }
 
   @media ${devices.tabletM} {
-    padding: 40px 20px;
+    padding: 40px 25px;
   }
 `;
 

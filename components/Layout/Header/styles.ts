@@ -77,6 +77,8 @@ export const NavigationPrimary = styled.div`
   }
   button {
     margin-top: 2rem;
+    width: 100%;
+    
     span {
       font-size: 30px;
     }
@@ -102,5 +104,18 @@ export const BurgerMenuContainer = styled.div`
 
   @media (max-width: 1200px) {
     display: block;
+  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 25px;
+
+  svg {
+    path {
+      fill: ${COLOR_LIGHT_BLUE};
+    }
   }
 `;

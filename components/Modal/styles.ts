@@ -45,7 +45,7 @@ export const BurgerSidebarContainer = styled.div<any>`
   overflow: hidden;
 
   @media ${devices.mobileL} {
-    max-width: 250px;
+    max-width: 100vw;
     overflow-y: auto;
     padding: 1.5rem;
   }
