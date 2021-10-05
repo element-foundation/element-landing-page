@@ -66,7 +66,7 @@ export const BuildElementWrapper = styled.section`
 
   .DecorativeLine {
     width: 100%;
-    background-image: url("./assets/svg/DecorationLineBuildBottom.svg");
+    background-image: url("./assets/svg/DecorativeLine/DecorationLineBuildBottom.svg");
     background-size: cover;
     height: 0;
     padding: 0;

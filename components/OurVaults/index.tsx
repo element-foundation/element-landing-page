@@ -10,11 +10,11 @@ import {
 } from "components/OurVaults/styles";
 import { VaultsItem } from "components/OurVaults/VaultsItem";
 
-import Currencies from "public/assets/png/Currencies.png";
-import Bitcoin from "public/assets/png/BTC.png";
-import DOGE from "public/assets/png/DOGE.png";
-import ETH from "public/assets/png/ETH.png";
-import USDC from "public/assets/png/USDC.png";
+import Currencies from "public/assets/png/Currencies/Currencies.png";
+import Bitcoin from "public/assets/png/Currencies/BTC.png";
+import DOGE from "public/assets/png/Currencies/DOGE.png";
+import ETH from "public/assets/png/Currencies/ETH.png";
+import USDC from "public/assets/png/Currencies/USDC.png";
 
 export interface VaultProps {
   [name: string]: any;
@@ -47,7 +47,7 @@ const vaultData = [
   },
   {
     currencyTitle: "LUSD",
-    currencyImage: Bitcoin,
+    currencyImage: "",
     currencyRainbow: true,
     currencyReturn: false,
   },

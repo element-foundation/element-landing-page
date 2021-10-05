@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
@@ -14,6 +13,7 @@ import SemiCircle from "public/assets/svg/SemiCircle.svg";
 import SemiO from "public/assets/svg/SemiO.svg";
 import GrowSavingSVG from "public/assets/svg/GrowSavingSVG.svg";
 import GrayBlock from "public/assets/svg/GrayBlock.svg";
+import { ExternalLink } from "components/common/Elements/ExternalLink";
 
 export const GrowSavings = () => {
   return (
@@ -50,11 +50,11 @@ export const GrowSavings = () => {
               penalties. You can trade your Principal Token back for it’s base
               asset at any time,
             </p>
-            <Link href="https://google.com/" passHref={true}>
+            <ExternalLink href="https://google.com/">
               <div>
                 <PrimaryButton variant="primary" text="Buy Principal Tokens" />
               </div>
-            </Link>
+            </ExternalLink>
           </ContentWrapper>
         </FlexWrapper>
       </SectionContainer>

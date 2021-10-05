@@ -1,58 +1,69 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Link from "next/link";
 import { SectionContainer } from "components/common/Elements/Container";
+import { ExternalLink } from "components/common/Elements/ExternalLink";
 import {
   FooterMain,
   Formality,
   LinkContainer,
+  LargeScreen,
+  SmallScreen,
 } from "components/Layout/Footer/styles";
 
 import ElementLogo from "public/assets/svg/Logo.svg";
+import ProductHunt from "public/assets/svg/ProductHunt.svg";
 
 export const Footer = () => {
   const getYear = () => new Date().getFullYear();
   return (
     <footer>
       <SectionContainer gridColumn="1/13" padding="5rem 0">
-        <FooterMain>
+        <SmallScreen>
           <Image
             src={ElementLogo}
             alt="Logo of Element Finance"
             layout="fixed"
           />
-          <LinkContainer variant="white">
-            <h3>Quick Links</h3>
-            <Link href="https://google.com/" passHref={true}>
-              Getting started
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Frequently Asked
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Questions
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Documentation
-            </Link>
+        </SmallScreen>
+        <FooterMain>
+          <LargeScreen>
+            <LinkContainer>
+              <img
+                src={"/assets/svg/Logo.svg"}
+                alt="Logo of Element Finance"
+                className="large-screen-logo"
+              />
+            </LinkContainer>
+          </LargeScreen>
+          <LinkContainer>
+            <h3>Home</h3>
+            <ExternalLink href="https://google.com/">Fixed Rates</ExternalLink>
+            <ExternalLink href="https://google.com/">Mint & LP</ExternalLink>
+            <ExternalLink href="https://google.com/">Pools</ExternalLink>
+            <ExternalLink href="https://google.com/">Portfolio</ExternalLink>
           </LinkContainer>
           <LinkContainer>
-            <h3>Resources</h3>
-            <Link href="https://google.com/" passHref={true}>
-              Discord
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Twitter
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Medium
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Github
-            </Link>
-            <Link href="https://google.com/" passHref={true}>
-              Telegram
-            </Link>
+            <h3>Learn</h3>
+            <ExternalLink href="https://google.com/">
+              Documentation
+            </ExternalLink>
+            <ExternalLink href="https://google.com/">White paper</ExternalLink>
+            <ExternalLink href="https://google.com/">Tutorial</ExternalLink>
+            <ExternalLink href="https://google.com/">
+              Guide to Fixed Interest
+            </ExternalLink>
           </LinkContainer>
+          <LinkContainer>
+            <h3>Social</h3>
+            <ExternalLink href="https://google.com/">Discord</ExternalLink>
+            <ExternalLink href="https://google.com/">Twitter</ExternalLink>
+            <ExternalLink href="https://google.com/">Medium</ExternalLink>
+            <ExternalLink href="https://google.com/">Github</ExternalLink>
+            <ExternalLink href="https://google.com/">Telegram</ExternalLink>
+          </LinkContainer>
+          <ExternalLink href="https://www.producthunt.com/posts/element-finance?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-element-finance">
+            <Image src={ProductHunt} alt="Product Hunt" layout="fixed" />
+          </ExternalLink>
         </FooterMain>
         <Formality>©{getYear()} ElementFi. All rights reserved</Formality>
       </SectionContainer>

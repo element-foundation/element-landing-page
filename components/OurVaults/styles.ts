@@ -59,6 +59,11 @@ export const VaultsItemContainer = styled.div`
     bottom: 12px;
     margin: 0;
   }
+
+  @media ${devices.mobileL} {
+    width: 75%;
+    margin: 0 auto;
+  }
 `;
 
 export const ValuesWrapper = styled.section`
@@ -67,7 +72,7 @@ export const ValuesWrapper = styled.section`
 
   .DecorativeLine {
     width: 100%;
-    background-image: url("./assets/svg/DecorativeLineValues.svg");
+    background-image: url("./assets/svg/DecorativeLine/DecorativeLineValues.svg");
     background-size: cover;
     height: 0;
     padding: 0;
@@ -114,7 +119,7 @@ export const ValuesWrapper = styled.section`
 
   .DecorativeLineBottom {
     width: 100%;
-    background-image: url("./assets/svg/DecorativeLineValuesBottom.svg");
+    background-image: url("./assets/svg/DecorativeLine/DecorativeLineValuesBottom.svg");
     background-size: cover;
     height: 0;
     padding: 0;

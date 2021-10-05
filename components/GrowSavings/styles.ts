@@ -102,7 +102,7 @@ export const GrowSavingsWrapper = styled.section`
 
   .DecorativeLine {
     width: 100%;
-    background-image: url("./assets/svg/DecorativeLine.svg");
+    background-image: url("./assets/svg/DecorativeLine/DecorativeLine.svg");
     background-size: cover;
     height: 0;
     padding: 0;

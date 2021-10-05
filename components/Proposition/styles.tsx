@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_DARK_BLUE } from "lib/colorPalette";
+import { COLOR_WHITE } from "lib/colorPalette";
 import {
   AbsoluteProps,
   AbsoluteSVGContainer,
@@ -35,5 +35,6 @@ export const SaleFlex = styled(Flex)`
 
 export const PropositionText = styled.p`
   font-size: 1.25rem;
-  color: ${COLOR_DARK_BLUE};
+  font-family: "Rubik SemiBold", Verdana, sans‑serif;
+  color: ${COLOR_WHITE};
 `;

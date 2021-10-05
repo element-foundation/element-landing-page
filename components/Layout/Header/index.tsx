@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { SectionContainer } from "components/common/Elements/Container";
 import { getScroll } from "lib/getScroll";
 import { PrimaryButton } from "components/common/Elements/Button";
+import { ExternalLink } from "components/common/Elements/ExternalLink";
 import {
   Flex,
   HeaderWrapper,
@@ -72,11 +72,11 @@ export const Header = () => {
         <StyledLink>
           <hr />
         </StyledLink>
-        <Link href="https://google.com/" passHref={true}>
+        <ExternalLink href="https://google.com/">
           <StyledLink>
             <PrimaryButton variant="primary" text="Launch application" />
           </StyledLink>
-        </Link>
+        </ExternalLink>
       </MenuItemContainer>
     );
   };
@@ -118,14 +118,14 @@ export const Header = () => {
                   <StyledLink onClick={() => scrollTo("treasury")}>
                     <p>Treasury Management</p>
                   </StyledLink>
-                  <Link href="https://google.com/" passHref={true}>
+                  <ExternalLink href="https://google.com/">
                     <StyledLink>
                       <PrimaryButton
                         variant="primary"
                         text="Launch application"
                       />
                     </StyledLink>
-                  </Link>
+                  </ExternalLink>
                 </NavigationPrimary>
               </BurgerSidebar>
             </BurgerMenuContainer>

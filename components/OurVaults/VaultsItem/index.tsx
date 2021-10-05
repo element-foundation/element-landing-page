@@ -4,8 +4,8 @@ import { VaultProps } from "components/OurVaults";
 import { VaultsItemContainer } from "components/OurVaults/styles";
 import Image from "next/image";
 
-import Rainbow from "public/assets/png/Rainbow.png";
-import Return from "public/assets/png/Return.png";
+import Rainbow from "public/assets/png/Currencies/Rainbow.png";
+import Return from "public/assets/png/Currencies/Return.png";
 
 export const VaultsItem = ({ item }: VaultProps) => {
   return (
@@ -34,7 +34,12 @@ export const VaultsItem = ({ item }: VaultProps) => {
           )}
         </Flex>
       </AbsoluteSVGContainer>
-      <Image src={item.currencyImage} alt={`Image of ${item.currencyImage}}`} />
+      {item.currencyImage && (
+        <Image
+          src={item.currencyImage}
+          alt={`Image of ${item.currencyImage}}`}
+        />
+      )}
       <p>{item.currencyTitle}</p>
     </VaultsItemContainer>
   );

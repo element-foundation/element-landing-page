@@ -3,20 +3,106 @@ import { SectionContainer } from "components/common/Elements/Container";
 import {
   InvestorsWrapper,
   GridContainer,
-  SmallScreen,
-  LargeScreen,
+  CardWrapper,
 } from "components/Investors/styles";
 import {
   AbsoluteSVGContainer,
   SectionTitle,
 } from "components/GrowSavings/styles";
 
-import QuarterO from "public/assets/png/o.png";
-import Logo from "public/assets/svg/Logo.svg";
-import a_capital from "public/assets/svg/a_capital.svg";
-import balancer from "public/assets/svg/balancer.svg";
-import robot_ventures from "public/assets/svg/robot_ventures.svg";
-import consensys from "public/assets/svg/consensys.svg";
+import a_capital from "public/assets/svg/Investors/a_capital.svg";
+import republic from "public/assets/svg/Investors/republic.svg";
+import advanced_blockchain from "public/assets/svg/Investors/advanced_blockchain.svg";
+import Venture from "public/assets/png/Investors/Venture.png";
+import balancer from "public/assets/svg/Investors/balancer.svg";
+import robot_ventures from "public/assets/svg/Investors/robot_ventures.svg";
+import Rarestone from "public/assets/png/Investors/Rarestone.png";
+import a16z from "public/assets/svg/Investors/a16z.svg";
+import scalar_capital from "public/assets/png/Investors/scalar_capital.png";
+import femboy_capital from "public/assets/svg/Investors/femboy_capital.svg";
+import placeholder from "public/assets/png/Investors/placeholder.png";
+import consensys from "public/assets/svg/Investors/consensys.svg";
+import yc from "public/assets/png/Investors/yc.png";
+import SVAngel from "public/assets/png/Investors/SVAngel.png";
+import GIC from "public/assets/png/Investors/GIC.png";
+
+const investorsData = [
+  {
+    investorTitle: "republic",
+    investorImage: republic,
+    height: "36px",
+  },
+  {
+    investorTitle: "Advanced Blockchain",
+    investorImage: advanced_blockchain,
+    height: "41px",
+  },
+  {
+    investorTitle: "Ethereal Ventures",
+    investorImage: Venture,
+    height: "9px",
+  },
+  {
+    investorTitle: "Balancer",
+    investorImage: balancer,
+    height: "28px",
+  },
+  {
+    investorTitle: "Robot Ventures",
+    investorImage: robot_ventures,
+    height: "37px",
+  },
+  {
+    investorTitle: "Rarestone",
+    investorImage: Rarestone,
+    height: "31px",
+  },
+  {
+    investorTitle: "a16z",
+    investorImage: a16z,
+    height: "35px",
+  },
+  {
+    investorTitle: "Scalar Capital",
+    investorImage: scalar_capital,
+    height: "38px",
+  },
+  {
+    investorTitle: "Femboy Capital",
+    investorImage: femboy_capital,
+    height: "19px",
+  },
+  {
+    investorTitle: "Placeholder",
+    investorImage: placeholder,
+    height: "24px",
+  },
+  {
+    investorTitle: "Consensys",
+    investorImage: consensys,
+    height: "34px",
+  },
+  {
+    investorTitle: "a_capital",
+    investorImage: a_capital,
+    height: "28px",
+  },
+  {
+    investorTitle: "yc",
+    investorImage: yc,
+    height: "69px",
+  },
+  {
+    investorTitle: "SVAngel",
+    investorImage: SVAngel,
+    height: "76px",
+  },
+  {
+    investorTitle: "GIC",
+    investorImage: GIC,
+    height: "55px",
+  },
+];
 
 export const Investors = () => {
   return (
@@ -24,33 +110,21 @@ export const Investors = () => {
       <AbsoluteSVGContainer right="0" top="6rem" className="decorative-line">
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13" textAlign="center" padding="0">
+      <SectionContainer gridColumn="1/13" textAlign="center" padding="0 0 4rem 0">
         <SectionTitle variant="primary">Our investors</SectionTitle>
-        <LargeScreen>
-          <GridContainer gridTemplateColumns="repeat(1, 1fr)">
-            <Image src={Logo} alt="Logo of Logo" />
-          </GridContainer>
-          <GridContainer gridTemplateColumns="repeat(2, 1fr)">
-            <Image src={a_capital} alt="Logo of a_capital" />
-            <Image src={Logo} alt="Logo of Logo" />
-          </GridContainer>
-          <GridContainer gridTemplateColumns="repeat(3, 1fr)">
-            <Image src={balancer} alt="Logo of Balancer" />
-            <Image src={robot_ventures} alt="Logo of ROBOT VENTURES" />
-            <Image src={consensys} alt="Logo of Consensys" />
-          </GridContainer>
-          <AbsoluteSVGContainer right="-244px" bottom="-244px">
-            <Image src={QuarterO} alt="SVG Illustration" />
-          </AbsoluteSVGContainer>
-        </LargeScreen>
-        <SmallScreen>
-          <GridContainer gridTemplateColumns="repeat(3, 1fr)">
-            <Image src={a_capital} alt="Logo of a_capital" />
-            <Image src={balancer} alt="Logo of Balancer" />
-            <Image src={robot_ventures} alt="Logo of ROBOT VENTURES" />
-            <Image src={consensys} alt="Logo of Consensys" />
-          </GridContainer>
-        </SmallScreen>
+        <GridContainer>
+          {investorsData.map((item, id) => {
+            return (
+              <CardWrapper key={id}>
+                <Image
+                  src={item.investorImage}
+                  alt={`Logo of ${item.investorTitle}`}
+                  height={item?.height}
+                />
+              </CardWrapper>
+            );
+          })}
+        </GridContainer>
       </SectionContainer>
     </InvestorsWrapper>
   );

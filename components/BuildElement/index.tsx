@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
+import { ExternalLink } from "components/common/Elements/ExternalLink";
 import {
   AbsoluteSVGContainer,
   ContentWrapper,
@@ -27,11 +27,11 @@ export const BuildElement = () => {
               feature that you want to build on top of Element or a completely
               new product, we love to see our community utilizing our SDK.
             </p>
-            <Link href="https://google.com/" passHref={true}>
+            <ExternalLink href="https://google.com/">
               <div>
                 <PrimaryButton variant="primary" text="Start building" />
               </div>
-            </Link>
+            </ExternalLink>
           </ContentWrapper>
           <div className="image-container">
             <Image src={CircleSquare} alt="SVG Element" />

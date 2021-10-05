@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
+import { ExternalLink } from "components/common/Elements/ExternalLink";
 import {
   HeroSectionText,
   SVGContainer,
@@ -27,7 +27,7 @@ export const HeroSection = () => {
           Element is an open source protocol for fixed and variable yield
           markets.
         </HeroSectionText>
-        <Link href="https://google.com/" passHref={true}>
+        <ExternalLink href="https://google.com/">
           <div>
             <PrimaryButton
               variant="primary"
@@ -35,7 +35,7 @@ export const HeroSection = () => {
               hasArrow={true}
             />
           </div>
-        </Link>
+        </ExternalLink>
       </ContentWrapper>
       <SVGContainer zIndex="5">
         <Image src={HeroStrobe} alt="SVG Illustration" />
