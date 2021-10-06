@@ -35,13 +35,20 @@ export const BuildElement = () => {
                   <PrimaryButton variant="primary" text="Start building" />
                 </div>
               </ExternalLink>
-            </ContentWrapper>
-            <div className="image-container">
-              {/* Placeholder svg that needs to be changed*/}
-              <Image src={Rectangle} alt="SVG Element" />
-              <Circle size="small" />
-            </div>
-          </FlexWrapper>
+              </ContentWrapper>
+              <div className="image-container">
+                {/* Placeholder svg that needs to be changed*/}
+                <Image src={Rectangle} alt="SVG Element" />
+                <Image
+                  src={Rectangle}
+                  width="346px"
+                  height="300px"
+                  alt="SVG Illustration"
+                />
+                <Circle size="small" />
+              </div>
+            </FlexWrapper>
+
         </Fade>
       </SectionContainer>
       <AbsoluteSVGContainer

@@ -8,7 +8,7 @@ const SEO = {
       "Element is an open source protocol for fixed and variable yield markets",
     type: "website",
     locale: "en_IE",
-    // url: "",
+    //url: "Website url here",
     site_name: "Element",
   },
   meta: {

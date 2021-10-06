@@ -43,9 +43,16 @@ export const HeroSection = () => {
               </div>
             </ExternalLink>
           </ContentWrapper>
+        
           {/* Placeholder svg that needs to be changed*/}
           <div className="image-container">
             <Image src={GrowSavingSVG} alt="SVG Illustration" />
+            <Image
+              src={GrowSavingSVG}
+              width="452px"
+              height="262px"
+              alt="SVG Illustration"
+            />
           </div>
         </FlexWrapper>
       </Slide>

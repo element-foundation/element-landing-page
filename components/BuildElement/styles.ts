@@ -32,7 +32,7 @@ export const FlexWrapper = styled(Flex)`
     }
   }
 
-  
+
   @media ${devices.tabletM} {
     flex-direction: column;
     margin-top: 12rem;
@@ -117,7 +117,7 @@ export const Circle = styled.div<CircleProps>`
 
   @media ${devices.tabletM} {
     left: ${({ size }) => size === "small" && "58%"};
-    top: ${({ size }) => size === "small" && "-48%"};
+    top: ${({ size }) => size === "small" && "-52%"};
   }
 
   @media ${devices.mobileL} {

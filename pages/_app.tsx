@@ -16,6 +16,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content={PreviewImage.src} key="ogimage" />
+        <meta property="og:url" content="Website url here" />
+               <meta
+                 property="og:description"
+                 content={
+                   "Element is an open source protocol for fixed and variable yield markets"
+                 }
+                 key="ogdescription"
+               />
+
       </Head>
       <GlobalStyle />
       <Header />

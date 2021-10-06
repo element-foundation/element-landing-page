@@ -32,6 +32,7 @@ export const TreasuryManagement = () => {
                 allowing Protocols, DAOs and organizations to earn fixed rate
                 yield on treasury capital while maintaining the ability to exit
                 if needed.
+          
               </p>
             </ContentWrapper>
           </CircleContainer>
