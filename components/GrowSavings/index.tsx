@@ -44,7 +44,7 @@ export const GrowSavings = () => {
                 no penalties. You can trade your Principal Token back for it’s
                 base asset at any time,
               </p>
-              <ExternalLink href="https://google.com/">
+              <ExternalLink href="https://app.element.fi/fixedrates/">
                 <div>
                   <PrimaryButton
                     variant="primary"

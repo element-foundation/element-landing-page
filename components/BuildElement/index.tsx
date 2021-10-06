@@ -30,7 +30,7 @@ export const BuildElement = () => {
                 completely new product, we love to see our community utilizing
                 our SDK.
               </p>
-              <ExternalLink href="https://google.com/">
+              <ExternalLink href="https://github.com/element-fi/elf-sdk">
                 <div>
                   <PrimaryButton variant="primary" text="Start building" />
                 </div>
