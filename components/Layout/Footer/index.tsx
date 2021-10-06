@@ -44,7 +44,7 @@ export const Footer = () => {
               </ExternalLink>
               <ExternalLink href="https://google.com/">Mint & LP</ExternalLink>
               <ExternalLink href="https://google.com/">Pools</ExternalLink>
-              <ExternalLink href="https://google.com/">Portfolio</ExternalLink>
+              <ExternalLink href="https://google.com/">Treasury Management</ExternalLink>
             </LinkContainer>
             <LinkContainer>
               <h3>Learn</h3>

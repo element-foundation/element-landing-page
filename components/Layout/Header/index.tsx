@@ -56,10 +56,10 @@ export const Header = () => {
     return (
       <MenuItemContainer>
         <StyledLink onClick={() => scrollTo("fixed-apr")}>
-          <p>Fixed APR</p>
+          <p>Fixed Rates</p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("liquidity")}>
-          <p>Add Liquidity</p>
+          <p>Mint & LP</p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("pools")}>
           <p>Pools</p>
@@ -73,7 +73,7 @@ export const Header = () => {
         <StyledLink>
           <hr />
         </StyledLink>
-        <ExternalLink href="https://google.com/">
+        <ExternalLink href="https://app.element.fi">
           <StyledLink>
             <PrimaryButton variant="primary" text="Launch application" />
           </StyledLink>
@@ -139,7 +139,7 @@ export const Header = () => {
                   <StyledLink onClick={() => scrollTo("treasury")}>
                     <p>Treasury Management</p>
                   </StyledLink>
-                  <ExternalLink href="https://google.com/">
+                  <ExternalLink href="https://app.element.fi">
                     <StyledLink>
                       <PrimaryButton
                         variant="primary"

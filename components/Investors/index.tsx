@@ -23,9 +23,9 @@ import scalar_capital from "public/assets/png/Investors/scalar_capital.png";
 import femboy_capital from "public/assets/svg/Investors/femboy_capital.svg";
 import placeholder from "public/assets/png/Investors/Placeholder.png";
 import consensys from "public/assets/svg/Investors/consensys.svg";
-import yc from "public/assets/png/Investors/yc.png";
-import SVAngel from "public/assets/png/Investors/SVAngel.png";
-import GIC from "public/assets/png/Investors/GIC.png";
+import yc from "public/assets/svg/Investors/yc.svg";
+import SVAngel from "public/assets/svg/Investors/SVAngel.svg";
+import poly from "public/assets/svg/Investors/poly.svg";
 
 const investorsData = [
   {
@@ -91,7 +91,7 @@ const investorsData = [
   {
     investorTitle: "yc",
     investorImage: yc,
-    height: "69px",
+    height: "50px",
   },
   {
     investorTitle: "SVAngel",
@@ -99,9 +99,9 @@ const investorsData = [
     height: "76px",
   },
   {
-    investorTitle: "GIC",
-    investorImage: GIC,
-    height: "55px",
+    investorTitle: "polychain",
+    investorImage: poly,
+    height: "40px",
   },
 ];
 
