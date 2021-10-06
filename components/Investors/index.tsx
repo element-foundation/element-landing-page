@@ -21,7 +21,7 @@ import Rarestone from "public/assets/png/Investors/Rarestone.png";
 import a16z from "public/assets/svg/Investors/a16z.svg";
 import scalar_capital from "public/assets/png/Investors/scalar_capital.png";
 import femboy_capital from "public/assets/svg/Investors/femboy_capital.svg";
-import placeholder from "public/assets/png/Investors/Placeholder.png";
+import placeholder from "public/assets/svg/Investors/Placeholder.svg";
 import consensys from "public/assets/svg/Investors/consensys.svg";
 import yc from "public/assets/svg/Investors/yc.svg";
 import SVAngel from "public/assets/svg/Investors/SVAngel.svg";

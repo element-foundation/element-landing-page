@@ -33,7 +33,7 @@ export const HeroSection = () => {
               Element is an open source protocol for fixed and variable yield
               markets.
             </HeroSectionText>
-            <ExternalLink href="https://google.com/">
+            <ExternalLink href="https://app.element.fi/">
               <div>
                 <PrimaryButton
                   variant="primary"
