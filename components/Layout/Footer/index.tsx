@@ -71,7 +71,7 @@ export const Footer = () => {
               <Image src={ProductHunt} alt="Product Hunt" layout="fixed" />
             </ExternalLink>
           </FooterMain>
-          <Formality>©{getYear()} © Element Finance. All rights reserved. </Formality>
+          <Formality>©{getYear()} Element Finance. All rights reserved. </Formality>
         </SectionContainer>
       </Fade>
     </footer>
