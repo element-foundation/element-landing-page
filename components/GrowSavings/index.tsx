@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
 import { ExternalLink } from "components/common/Elements/ExternalLink";
+import Lottie from "react-lottie";
 import {
   FlexWrapper,
   ContentWrapper,
@@ -11,10 +12,19 @@ import {
   AbsoluteSVGContainer,
 } from "components/GrowSavings/styles";
 
-import GrowSavingSVG from "public/assets/svg/GrowSavingSVG.svg";
+import GrowSavingAnimationDark from "public/assets/lotties/GrowSavingAnimationDark.json";
 import GrayBlock from "public/assets/svg/GrayBlock.svg";
 
 export const GrowSavings = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: GrowSavingAnimationDark,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <GrowSavingsWrapper id="liquidity">
       <AbsoluteSVGContainer
@@ -32,7 +42,7 @@ export const GrowSavings = () => {
         <Fade duration={2500} delay={200} triggerOnce>
           <FlexWrapper>
             <div className="image-container">
-              <Image src={GrowSavingSVG} alt="SVG Illustration" />
+              <Lottie options={defaultOptions} height={"100%"} width={500} />
             </div>
             <ContentWrapper>
               <SectionTitle variant="primary">Grow your savings</SectionTitle>

@@ -91,6 +91,7 @@ export const GrowSavingsWrapper = styled.section`
     justify-content: center;
     display: flex;
     pointer-events: none;
+    z-index: 1;
 
     @media ${devices.tabletL} {
       top: -15%;
