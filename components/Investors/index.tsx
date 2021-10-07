@@ -12,6 +12,7 @@ import {
 } from "components/GrowSavings/styles";
 
 import a_capital from "public/assets/svg/Investors/a_capital.svg";
+import republic from "public/assets/svg/Investors/republic.svg";
 import advanced_blockchain from "public/assets/svg/Investors/advanced_blockchain.svg";
 import Venture from "public/assets/png/Investors/Venture.png";
 import balancer from "public/assets/svg/Investors/balancer.svg";
@@ -27,8 +28,6 @@ import SVAngel from "public/assets/svg/Investors/SVAngel.svg";
 import poly from "public/assets/svg/Investors/poly.svg";
 
 const investorsData = [
-
-
   {
     investorTitle: "Ethereal Ventures",
     investorImage: Venture,
@@ -54,10 +53,16 @@ const investorsData = [
     investorImage: scalar_capital,
     height: "38px",
   },
+
   {
     investorTitle: "Placeholder",
     investorImage: placeholder,
     height: "24px",
+  },
+  {
+    investorTitle: "Consensys",
+    investorImage: consensys,
+    height: "34px",
   },
   {
     investorTitle: "a_capital",

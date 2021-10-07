@@ -50,7 +50,7 @@ export const NewsLetter = () => {
               <h4>
                 {submitted
                   ? "Contgratulations! You've subscribed"
-                  : "Subscribe to our newsletter"}
+                  : "Subscribe to our newsletter text"}
               </h4>
               {!submitted && (
                 <p>
