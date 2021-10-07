@@ -12,7 +12,6 @@ import {
 } from "components/GrowSavings/styles";
 
 import a_capital from "public/assets/svg/Investors/a_capital.svg";
-import republic from "public/assets/svg/Investors/republic.svg";
 import advanced_blockchain from "public/assets/svg/Investors/advanced_blockchain.svg";
 import Venture from "public/assets/png/Investors/Venture.png";
 import balancer from "public/assets/svg/Investors/balancer.svg";
@@ -28,16 +27,8 @@ import SVAngel from "public/assets/svg/Investors/SVAngel.svg";
 import poly from "public/assets/svg/Investors/poly.svg";
 
 const investorsData = [
-  {
-    investorTitle: "republic",
-    investorImage: republic,
-    height: "36px",
-  },
-  {
-    investorTitle: "Advanced Blockchain",
-    investorImage: advanced_blockchain,
-    height: "41px",
-  },
+ 
+ 
   {
     investorTitle: "Ethereal Ventures",
     investorImage: Venture,
@@ -69,11 +60,6 @@ const investorsData = [
     height: "38px",
   },
   {
-    investorTitle: "Femboy Capital",
-    investorImage: femboy_capital,
-    height: "19px",
-  },
-  {
     investorTitle: "Placeholder",
     investorImage: placeholder,
     height: "24px",
@@ -89,19 +75,9 @@ const investorsData = [
     height: "28px",
   },
   {
-    investorTitle: "yc",
-    investorImage: yc,
-    height: "50px",
-  },
-  {
     investorTitle: "SVAngel",
     investorImage: SVAngel,
     height: "76px",
-  },
-  {
-    investorTitle: "polychain",
-    investorImage: poly,
-    height: "40px",
   },
 ];
 
