@@ -56,19 +56,19 @@ export const Header = () => {
     return (
       <MenuItemContainer>
         <StyledLink onClick={() => scrollTo("fixed-apr")}>
-          <p>Fixed Rates</p>
+          <p></p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("liquidity")}>
-          <p>Mint & LP</p>
+          <p></p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("pools")}>
-          <p>Pools</p>
+          <p></p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("build")}>
-          <p>Build</p>
+          <p></p>
         </StyledLink>
         <StyledLink onClick={() => scrollTo("treasury")}>
-          <p>Treasury Management</p>
+          <p></p>
         </StyledLink>
         <StyledLink>
           <hr />
@@ -125,19 +125,19 @@ export const Header = () => {
                 </CloseButton>
                 <NavigationPrimary>
                   <StyledLink onClick={() => scrollTo("fixed-apr")}>
-                    <p>Fixed APR</p>
+                    <p></p>
                   </StyledLink>
                   <StyledLink onClick={() => scrollTo("liquidity")}>
-                    <p>Add Liquidity</p>
+                    <p></p>
                   </StyledLink>
                   <StyledLink onClick={() => scrollTo("pools")}>
-                    <p>Pools</p>
+                    <p></p>
                   </StyledLink>
                   <StyledLink onClick={() => scrollTo("build")}>
-                    <p>Build</p>
+                    <p></p>
                   </StyledLink>
                   <StyledLink onClick={() => scrollTo("treasury")}>
-                    <p>Treasury Management</p>
+                    <p></p>
                   </StyledLink>
                   <ExternalLink href="https://app.element.fi">
                     <StyledLink>
