@@ -34,13 +34,6 @@ export const TreasuryManagement = () => {
                 the ability to exit if needed.
 
               </p>
-
-              <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform">
-                <div>
-                  <PrimaryButton variant="primary" text="Contact us" />
-                </div>
-
-              </ExternalLink>
             </ContentWrapper>
           </CircleContainer>
         </FlexWrapper>

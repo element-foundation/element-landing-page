@@ -53,16 +53,10 @@ const investorsData = [
     investorImage: scalar_capital,
     height: "38px",
   },
-
   {
     investorTitle: "Placeholder",
     investorImage: placeholder,
     height: "24px",
-  },
-  {
-    investorTitle: "Consensys",
-    investorImage: consensys,
-    height: "34px",
   },
   {
     investorTitle: "a_capital",

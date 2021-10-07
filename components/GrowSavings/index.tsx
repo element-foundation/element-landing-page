@@ -54,6 +54,7 @@ export const GrowSavings = () => {
                 your token and earned APR. Our Principal Tokens have no minimums
                 and no penalties. You can trade your Principal Token back for
                 its base asset at any time.
+
               </p>
               <ExternalLink href="https://app.element.fi/fixedrates/">
                 <div>

@@ -23,7 +23,7 @@ export const Proposition = () => {
         <MainContent>
           <Flex direction="column">
             <Image src={Money} alt="SVG Illustration" />
-            <PropositionText>Deposit into a pool</PropositionText>
+            <PropositionText>Select your asset and term</PropositionText>
           </Flex>
           <SaleFlex>
             <AbsoluteSVGContainer right="-30%" top="30%">
@@ -33,7 +33,7 @@ export const Proposition = () => {
               <Image src={ArrowDown} alt="SVG Illustration" />
             </AbsoluteMobileSVGContainer>
             <Image src={Sale} alt="SVG Illustration" />
-            <PropositionText>Select your term period</PropositionText>
+            <PropositionText>Purchase Principal Tokens</PropositionText>
             <AbsoluteSVGContainer left="-30%" top="30%">
               <Image src={Arrow} alt="SVG Illustration" />
             </AbsoluteSVGContainer>
@@ -43,7 +43,7 @@ export const Proposition = () => {
           </SaleFlex>
           <Flex direction="column">
             <Image src={Safe} alt="SVG Illustration" />
-            <PropositionText>Redeem from our vaults</PropositionText>
+            <PropositionText>Redeem for fixed yield</PropositionText>
           </Flex>
         </MainContent>
       </Fade>
