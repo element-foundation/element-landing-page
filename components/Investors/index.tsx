@@ -27,8 +27,8 @@ import SVAngel from "public/assets/svg/Investors/SVAngel.svg";
 import poly from "public/assets/svg/Investors/poly.svg";
 
 const investorsData = [
- 
- 
+
+
   {
     investorTitle: "Ethereal Ventures",
     investorImage: Venture,
@@ -45,11 +45,6 @@ const investorsData = [
     height: "37px",
   },
   {
-    investorTitle: "Rarestone",
-    investorImage: Rarestone,
-    height: "31px",
-  },
-  {
     investorTitle: "a16z",
     investorImage: a16z,
     height: "35px",
@@ -63,11 +58,6 @@ const investorsData = [
     investorTitle: "Placeholder",
     investorImage: placeholder,
     height: "24px",
-  },
-  {
-    investorTitle: "Consensys",
-    investorImage: consensys,
-    height: "34px",
   },
   {
     investorTitle: "a_capital",
