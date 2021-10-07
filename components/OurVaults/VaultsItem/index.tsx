@@ -4,7 +4,7 @@ import { VaultProps } from "components/OurVaults";
 import { VaultsItemContainer } from "components/OurVaults/styles";
 import Image from "next/image";
 
-import Rainbow from "public/assets/png/Currencies/Rainbow.png";
+import Rainbow from "public/assets/svg/Currencies/Rainbow.svg";
 import Return from "public/assets/png/Currencies/Return.png";
 
 export const VaultsItem = ({ item }: VaultProps) => {
@@ -16,8 +16,8 @@ export const VaultsItem = ({ item }: VaultProps) => {
             <div>
               <Image
                 src={Return}
-                width="22px"
-                height="22px"
+                width="26px"
+                height="26px"
                 alt={`Image of ${item.currencyImage}}`}
               />
             </div>
@@ -26,8 +26,8 @@ export const VaultsItem = ({ item }: VaultProps) => {
             <div className="margin-left">
               <Image
                 src={Rainbow}
-                width="22px"
-                height="22px"
+                width="26px"
+                height="26px"
                 alt={`Image of ${item.currencyImage}}`}
               />
             </div>

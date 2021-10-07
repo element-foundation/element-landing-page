@@ -38,7 +38,6 @@ export const BuildElement = () => {
               </ContentWrapper>
               <div className="image-container">
                 {/* Placeholder svg that needs to be changed*/}
-                <Image src={Rectangle} alt="SVG Element" />
                 <Image
                   src={Rectangle}
                   width="346px"

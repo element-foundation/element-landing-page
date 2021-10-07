@@ -41,7 +41,7 @@ export const LinkContainer = styled.div`
   }
 
   .large-screen-logo {
-    margin-top: -1.8rem;
+    margin-top: -1.6rem;
     width: 245px;
 
     @media ${devices.desktopL} {

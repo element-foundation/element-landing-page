@@ -39,7 +39,7 @@ export const VaultsItemContainer = styled.div`
     ${COLOR_DARKER_BLUE}
   );
   border-radius: 10px;
-  padding: 47px 23px;
+  padding: 55px 23px;
   display: flex;
   justify-content: center;
   align-items: center;

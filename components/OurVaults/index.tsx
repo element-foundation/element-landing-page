@@ -11,11 +11,12 @@ import {
 } from "components/OurVaults/styles";
 import { VaultsItem } from "components/OurVaults/VaultsItem";
 
-import Currencies from "public/assets/png/Currencies/Currencies.png";
-import Bitcoin from "public/assets/png/Currencies/BTC.png";
-import DOGE from "public/assets/png/Currencies/DOGE.png";
-import ETH from "public/assets/png/Currencies/ETH.png";
-import USDC from "public/assets/png/Currencies/USDC.png";
+import Currencies from "public/assets/svg/Currencies/Currencies.svg";
+import Bitcoin from "public/assets/svg/Currencies/BTC.svg";
+import ETH from "public/assets/svg/Currencies/ETH.svg";
+import USDC from "public/assets/svg/Currencies/USDC.svg";
+import DAI from "public/assets/svg/Currencies/DAI.svg";
+import LUSD from "public/assets/svg/Currencies/LUSD.svg";
 
 export interface VaultProps {
   [name: string]: any;
@@ -31,7 +32,7 @@ const vaultData = [
   {
     currencyTitle: "Wrapped Bitcoin",
     currencyImage: Bitcoin,
-    currencyRainbow: true,
+    currencyRainbow: false,
     currencyReturn: true,
   },
   {
@@ -42,13 +43,13 @@ const vaultData = [
   },
   {
     currencyTitle: "DAI",
-    currencyImage: DOGE,
+    currencyImage: DAI,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
     currencyTitle: "LUSD",
-    currencyImage: "",
+    currencyImage: LUSD,
     currencyRainbow: true,
     currencyReturn: false,
   },

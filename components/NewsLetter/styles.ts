@@ -40,6 +40,8 @@ export const NewsLetterContainer = styled.form`
   background: linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_WHITE});
   padding: 54px 48px;
   border-radius: 16px;
+  min-height: 248px;
+  display: flex;
 
   @media ${devices.desktopL} {
     padding: 40px 48px;

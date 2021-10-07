@@ -1,22 +1,16 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-}
-
-images: {
-    // domain here
-    domains: [
-      "media.giphy.com",
-      // element.fi here
-    ],
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
+  images: {
+    domains: ["element.fi"],
+    async headers() {
+      return [
+        {
+          source: "/(.*)",
+          headers: securityHeaders,
+        },
+      ];
+    },
   },
 };
 
