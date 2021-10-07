@@ -28,10 +28,10 @@ export const TreasuryManagement = () => {
             <ContentWrapper>
               <SectionTitle>Treasury Management with Element</SectionTitle>
               <p>
-                Element is the perfect treasury diversification solution
-                allowing Protocols, DAOs and organizations to earn fixed rate
-                yield on treasury capital while maintaining the ability to exit
-                if needed.
+              Element is the perfect treasury diversification 
+              solution allowing Protocols, DAOs and organizations
+               to earn fixed rate yield on their treasury capital 
+               while maintaining the ability to exit if needed.
           
               </p>
             </ContentWrapper>
