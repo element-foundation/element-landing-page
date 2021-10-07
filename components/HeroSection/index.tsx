@@ -36,7 +36,7 @@ export const HeroSection = () => {
         <FlexWrapper heroSection={true}>
           <ContentWrapper>
             <h1>
-              Defi’s largest fixed rate <Break />
+              The fixed rate <Break />
               protocol
             </h1>
             <HeroSectionText>
