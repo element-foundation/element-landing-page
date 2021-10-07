@@ -5,7 +5,6 @@ import { SectionContainer } from "components/common/Elements/Container";
 import { ExternalLink } from "components/common/Elements/ExternalLink";
 import { FlexWrapper } from "components/GrowSavings/styles";
 import { Break } from "components/NewsLetter/styles";
-import Lottie from "react-lottie";
 import {
   HeroSectionText,
   SVGContainer,
@@ -13,18 +12,9 @@ import {
 } from "components/HeroSection/styles";
 
 import HeroStrobe from "public/assets/svg/HeroStrobe.svg";
-import HeroAnimationDark from "public/assets/lotties/HeroAnimationDark.json";
+import GrowSavingSVG from "public/assets/svg/GrowSavingSVG.svg";
 
 export const HeroSection = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: HeroAnimationDark,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   return (
     <SectionContainer
       padding="18rem 0"
@@ -36,14 +26,14 @@ export const HeroSection = () => {
         <FlexWrapper heroSection={true}>
           <ContentWrapper>
             <h1>
-              Defi’s largest fixed rate <Break />
+              The fixed rate <Break />
               protocol
             </h1>
             <HeroSectionText>
               Element is an open source protocol for fixed and variable yield
               markets.
             </HeroSectionText>
-            <ExternalLink href="https://app.element.fi/">
+            <ExternalLink href="https://google.com/">
               <div>
                 <PrimaryButton
                   variant="primary"
@@ -53,8 +43,9 @@ export const HeroSection = () => {
               </div>
             </ExternalLink>
           </ContentWrapper>
+          {/* Placeholder svg that needs to be changed*/}
           <div className="image-container">
-            <Lottie options={defaultOptions} height={"100%"} width={450} />
+            <Image src={GrowSavingSVG} alt="SVG Illustration" />
           </div>
         </FlexWrapper>
       </Slide>
