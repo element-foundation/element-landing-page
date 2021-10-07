@@ -60,6 +60,11 @@ const investorsData = [
     height: "24px",
   },
   {
+    investorTitle: "Consensys",
+    investorImage: consensys,
+    height: "34px",
+  },
+  {
     investorTitle: "a_capital",
     investorImage: a_capital,
     height: "28px",
