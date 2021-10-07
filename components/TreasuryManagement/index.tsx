@@ -31,7 +31,10 @@ export const TreasuryManagement = () => {
                 Element is the perfect treasury diversification solution
                 allowing Protocols, DAOs and organizations to earn fixed
                 rate yield on their treasury capital while maintaining
-                the ability to exit if needed.
+                the ability to exit if needed. For more information inquire
+                <LinkContainer>
+                  <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform">here.</ExternalLink>
+                  </LinkContainer>
 
               </p>
             </ContentWrapper>
