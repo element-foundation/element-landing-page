@@ -1,4 +1,7 @@
 import { Fade } from "react-awesome-reveal";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { VaultsItem } from "components/OurVaults/VaultsItem";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
@@ -9,7 +12,6 @@ import {
   ValuesWrapper,
   VaultsContainer,
 } from "components/OurVaults/styles";
-import { VaultsItem } from "components/OurVaults/VaultsItem";
 
 import Currencies from "public/assets/svg/Currencies/Currencies.svg";
 import Bitcoin from "public/assets/svg/Currencies/BTC.svg";
@@ -20,6 +22,7 @@ import LUSD from "public/assets/svg/Currencies/LUSD.svg";
 
 export interface VaultProps {
   [name: string]: any;
+  darkTheme?: boolean;
 }
 
 const vaultData = [
@@ -62,6 +65,12 @@ const vaultData = [
 ];
 
 export const OurVaults = () => {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
     <ValuesWrapper>
       <AbsoluteSVGContainer
@@ -72,13 +81,21 @@ export const OurVaults = () => {
       >
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13" padding="0" id="pools">
+      <SectionContainer gridColumn="1/13" padding="0">
         <Fade duration={2500} delay={200} triggerOnce>
-          <VaultsContainer>
-            <SectionTitle variant="primary">Our vaults</SectionTitle>
+          <VaultsContainer darkTheme={resolvedTheme === "dark"}>
+            <SectionTitle darkTheme={resolvedTheme === "dark"}>
+              Our vaults
+            </SectionTitle>
             <GridContainer>
               {vaultData.map((item: VaultProps, id: number) => {
-                return <VaultsItem key={id} item={item} />;
+                return (
+                  <VaultsItem
+                    key={id}
+                    item={item}
+                    darkTheme={resolvedTheme === "dark"}
+                  />
+                );
               })}
             </GridContainer>
           </VaultsContainer>

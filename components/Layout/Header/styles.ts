@@ -6,6 +6,8 @@ import {
   COLOR_LIGHT_BLUE,
   COLOR_DARK_GRAY,
   COLOR_WHITE,
+  COLOR_LIGHT_BACKGROUND_HEADER,
+  COLOR_DARK_BLUE,
 } from "lib/colorPalette";
 
 export const StyledLink = styled.div`
@@ -18,13 +20,6 @@ export const StyledLink = styled.div`
     transition: color 0.3s;
     font-size: 1rem;
     margin: auto 12.5px;
-  }
-
-  hr {
-    border-left-width: 2px;
-    height: 24px;
-    border-color: ${COLOR_DARK_GRAY};
-    margin: 0 24px 0 12px;
   }
 
   &:hover {
@@ -42,7 +37,8 @@ export const FixedHeader = styled.header<any>`
   padding: ${({ changeColor }) => (changeColor ? "2rem 0" : "4.5rem 0")};
   z-index: 10;
   transition: all 0.3s;
-  background-color: ${COLOR_DARK_BACKGROUND_HEADER};
+  background-color: ${({ darkTheme }) =>
+    darkTheme ? COLOR_DARK_BACKGROUND_HEADER : COLOR_LIGHT_BACKGROUND_HEADER};
   box-shadow: ${({ changeColor }) =>
     changeColor ? `0 -2px 6px ${COLOR_LIGHT_BLUE}` : "none"};
   backdrop-filter: saturate(180%) blur(5px);
@@ -58,6 +54,18 @@ export const FixedHeader = styled.header<any>`
   section {
     padding: 0;
   }
+
+  p {
+    color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE)};
+  }
+
+  hr {
+    border-left-width: 2px;
+    height: 24px;
+    border-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_DARK_GRAY : COLOR_DARK_BLUE};
+    margin: 0 24px 0 12px;
+  }
 `;
 
 export const MenuItemContainer = styled(Flex)`
@@ -71,6 +79,10 @@ export const NavigationPrimary = styled.div`
   flex-direction: column;
   text-align: start;
 
+  hr {
+    display: none;
+  }
+
   p {
     font-size: 30px;
     margin: 2rem 0;
@@ -78,7 +90,7 @@ export const NavigationPrimary = styled.div`
   button {
     margin-top: 2rem;
     width: 100%;
-    
+
     span {
       font-size: 30px;
     }
@@ -86,13 +98,13 @@ export const NavigationPrimary = styled.div`
 
   @media ${devices.mobileL} {
     column-count: 1;
-    p {
+    p,
+    button span {
       text-align: center;
       font-size: 20px;
     }
 
     p {
-      font-size: 25px;
       margin-bottom: 1.5rem;
       display: block;
     }
@@ -109,13 +121,25 @@ export const BurgerMenuContainer = styled.div`
 
 export const CloseButton = styled.div`
   position: absolute;
-  right: 25px;
-  top: 25px;
+  right: 40px;
+  top: 4rem;
   width: 25px;
+
+  @media ${devices.tabletM} {
+    right: 25px;
+    width: 25px;
+  }
 
   svg {
     path {
       fill: ${COLOR_LIGHT_BLUE};
     }
+  }
+`;
+
+export const ImageContainer = styled.div`
+  @media ${devices.mobileM} {
+    display: flex;
+    width: 70%;
   }
 `;

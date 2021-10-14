@@ -1,5 +1,10 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_BLACK, COLOR_LIGHT_BLUE, COLOR_WHITE } from "lib/colorPalette";
+import {
+  COLOR_BLACK,
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_WHITE,
+} from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -36,8 +41,11 @@ export const FlexWrapper = styled(Flex)`
   }
 `;
 
-export const NewsLetterContainer = styled.form`
-  background: linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_WHITE});
+export const NewsLetterContainer = styled.form<any>`
+  background: ${({ darkTheme }) =>
+    darkTheme
+      ? `linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_WHITE})`
+      : COLOR_DARK_BLUE};
   padding: 54px 48px;
   border-radius: 16px;
   min-height: 248px;
@@ -49,6 +57,31 @@ export const NewsLetterContainer = styled.form`
 
   @media ${devices.tabletM} {
     padding: 40px 25px;
+  }
+
+  p,
+  h4,
+  input {
+    color: ${({ darkTheme }) => (darkTheme ? COLOR_BLACK : COLOR_WHITE)};
+  }
+
+  input {
+    :-ms-input-placeholder {
+      color: ${({ darkTheme }) => (darkTheme ? COLOR_BLACK : COLOR_WHITE)};
+      font-size: 1rem;
+    }
+
+    ::-ms-input-placeholder {
+      color: ${({ darkTheme }) => (darkTheme ? COLOR_BLACK : COLOR_WHITE)};
+      font-size: 1rem;
+    }
+
+    ::placeholder {
+      color: ${({ darkTheme }) => (darkTheme ? COLOR_BLACK : COLOR_WHITE)};
+      font-size: 1rem;
+    }
+    border-bottom: ${({ darkTheme }) =>
+      darkTheme ? `1px solid ${COLOR_BLACK}` : `1px solid ${COLOR_WHITE}`};
   }
 `;
 
@@ -72,7 +105,6 @@ export const MainContent = styled.div`
 
   h4,
   p {
-    color: ${COLOR_BLACK};
     text-align: start;
   }
 `;

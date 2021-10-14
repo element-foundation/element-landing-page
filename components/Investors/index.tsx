@@ -1,5 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   InvestorsWrapper,
@@ -71,6 +73,12 @@ const investorsData = [
 ];
 
 export const Investors = () => {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
     <InvestorsWrapper>
       <AbsoluteSVGContainer right="0" top="6rem" className="decorative-line">
@@ -82,11 +90,13 @@ export const Investors = () => {
         padding="0 0 4rem 0"
       >
         <Fade duration={2500} delay={200} triggerOnce>
-          <SectionTitle variant="primary">Our investors</SectionTitle>
+          <SectionTitle darkTheme={resolvedTheme === "dark"}>
+            Our investors
+          </SectionTitle>
           <GridContainer>
             {investorsData.map((item, id) => {
               return (
-                <CardWrapper key={id}>
+                <CardWrapper key={id} darkTheme={resolvedTheme === "dark"}>
                   <Image
                     src={item.investorImage}
                     alt={`Logo of ${item.investorTitle}`}

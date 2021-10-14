@@ -7,9 +7,9 @@ import Image from "next/image";
 import Rainbow from "public/assets/svg/Currencies/Rainbow.svg";
 import Return from "public/assets/png/Currencies/Return.png";
 
-export const VaultsItem = ({ item }: VaultProps) => {
+export const VaultsItem = ({ item, darkTheme }: VaultProps) => {
   return (
-    <VaultsItemContainer>
+    <VaultsItemContainer darkTheme={darkTheme}>
       <AbsoluteSVGContainer top="11px" right="11px">
         <Flex>
           {item.currencyReturn && (

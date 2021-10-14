@@ -1,10 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { devices } from "lib/devices";
-import {
-  COLOR_DARK_BACKGROUND,
-  COLOR_LIGHT_BLUE,
-  COLOR_WHITE,
-} from "lib/colorPalette";
 
 export const GlobalStyle = createGlobalStyle`
     body {
@@ -13,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
       border: 0;
       outline: 0;
       overflow-x: hidden;
-      background-color: ${COLOR_DARK_BACKGROUND};
     }
 
     * {
@@ -40,7 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     button {
       padding: 0;
       line-height: inherit;
-      color: inherit;
       cursor: pointer;
     }
     
@@ -61,7 +54,6 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 75.84px;
       letter-spacing: 0.025rem;
       margin-bottom: 1rem;
-      color: ${COLOR_LIGHT_BLUE};
       font-family: 'Rubik Bold', Verdana, sans‑serif;
 
       
@@ -77,7 +69,6 @@ export const GlobalStyle = createGlobalStyle`
 
     h2 {
       line-height: 60px;
-      color: ${COLOR_LIGHT_BLUE};
       font-family: 'Rubik Bold', Verdana, sans‑serif;
       font-size: 2.5125rem;      
 
@@ -89,7 +80,6 @@ export const GlobalStyle = createGlobalStyle`
     h3 {
       font-size: 1.25rem;      
       margin-bottom: 1rem;
-      color: ${COLOR_LIGHT_BLUE};
       font-family: 'Rubik Medium', Verdana, sans‑serif;
       font-weight: 500;
 
@@ -101,7 +91,6 @@ export const GlobalStyle = createGlobalStyle`
     h4 {
       font-size: 2rem;      
       margin-bottom: 1rem;
-      color: ${COLOR_LIGHT_BLUE};
       font-family: 'Rubik Bold', Verdana, sans‑serif;
       font-weight: 500;
 
@@ -112,7 +101,6 @@ export const GlobalStyle = createGlobalStyle`
 
     p {
       line-height: 28px;
-      color: ${COLOR_WHITE}
     }
 
     p, button, input {

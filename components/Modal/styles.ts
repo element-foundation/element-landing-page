@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
-import { COLOR_DARK_BACKGROUND, COLOR_LIGHT_BLUE } from "lib/colorPalette";
+import {
+  COLOR_DARK_BACKGROUND,
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_LIGHT_BACKGROUND,
+} from "lib/colorPalette";
 import { AnimateSlideBurger } from "styles/globalStyles";
 
 export const BurgerSidebarWrapper = styled(AnimateSlideBurger)`
@@ -35,8 +40,9 @@ export const BurgerSidebarContainer = styled.div<any>`
   max-width: 30rem;
   width: 100%;
   height: 100vh;
-  padding: 2.5rem 4rem 4rem;
-  background: ${COLOR_DARK_BACKGROUND};
+  padding: 4.5rem 4rem 4rem;
+  background-color: ${({ darkTheme }) =>
+    darkTheme ? COLOR_DARK_BACKGROUND : COLOR_LIGHT_BACKGROUND};
   position: fixed;
   top: 0;
   bottom: 0;
@@ -44,9 +50,16 @@ export const BurgerSidebarContainer = styled.div<any>`
   box-shadow: 0 -2px 6px ${COLOR_LIGHT_BLUE};
   overflow: hidden;
 
+  svg {
+    path {
+      fill: ${({ darkTheme }) =>
+        darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE} !important;
+    }
+  }
+
   @media ${devices.mobileL} {
     max-width: 100vw;
     overflow-y: auto;
-    padding: 1.5rem;
+    padding: 4.5rem 0;
   }
 `;

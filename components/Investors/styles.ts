@@ -1,4 +1,4 @@
-import { COLOR_DARKER_BLUE, COLOR_LIGHT_BLUE } from "lib/colorPalette";
+import { COLOR_DARKER_BLUE, COLOR_DARK_BLUE, COLOR_LIGHT_BLUE, COLOR_LIGHT_FOOTER } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -74,12 +74,11 @@ export const GridContainer = styled.div<any>`
   }
 `;
 
-export const CardWrapper = styled.div`
-  background: linear-gradient(
-    180deg,
-    ${COLOR_LIGHT_BLUE},
-    ${COLOR_DARKER_BLUE}
-  );
+export const CardWrapper = styled.div<any>`
+  background: ${({ darkTheme }) =>
+    darkTheme
+      ? `linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_DARKER_BLUE})`
+      : `linear-gradient(180deg, ${COLOR_DARK_BLUE}, ${COLOR_LIGHT_FOOTER})`};
   border-radius: 20px;
   height: 132px;
   padding: 28px 23px;

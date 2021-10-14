@@ -1,5 +1,5 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_LIGHT_BLUE, COLOR_DARK_GRAY } from "lib/colorPalette";
+import { COLOR_LIGHT_BLUE, COLOR_DARK_BLUE, COLOR_DARK_GRAY } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -7,7 +7,6 @@ export const IconContainer = styled.div`
   height: 80px;
   width: 80px;
   min-width: 80px;
-  background-color: ${COLOR_DARK_GRAY};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,16 +16,19 @@ export const IconContainer = styled.div`
 export const StatsContent = styled.div`
   margin-left: 24px;
   p {
-    color: ${COLOR_LIGHT_BLUE};
     margin: 0;
   }
 
   h2 {
     margin: 0;
   }
+
+  @media ${devices.mobileL} {
+    margin-left: 0;
+  }
 `;
 
-export const MainContent = styled.div`
+export const MainContent = styled.div<any>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
@@ -53,6 +55,18 @@ export const MainContent = styled.div`
         margin-top: 2.5rem;
       }
     }
+  }
+
+  ${IconContainer} {
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_DARK_GRAY : COLOR_DARK_BLUE};
+  }
+
+  p,
+  h2 {
+    color: ${COLOR_LIGHT_BLUE};
+    color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
   }
 
   ${Flex} {

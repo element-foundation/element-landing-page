@@ -12,11 +12,13 @@ export interface BurgerSidebarProps {
   open: boolean;
   children: React.ReactNode;
   handleClose: () => void;
+  darkTheme: boolean;
 }
 
 export const BurgerSidebar = ({
   open,
   children,
+  darkTheme,
   handleClose,
 }: BurgerSidebarProps) => {
   const TIMEOUT: number = 450;
@@ -36,7 +38,7 @@ export const BurgerSidebar = ({
         }}
       >
         <BurgerSidebarWrapper>
-          <BurgerSidebarContainer ref={wrapperRef}>
+          <BurgerSidebarContainer ref={wrapperRef} darkTheme={darkTheme}>
             {children}
           </BurgerSidebarContainer>
         </BurgerSidebarWrapper>

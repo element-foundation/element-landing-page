@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
-import { COLOR_BLACK, COLOR_LIGHT_BLUE } from "lib/colorPalette";
+import {
+  COLOR_BLACK,
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_WHITE,
+} from "lib/colorPalette";
 
 export const ScrollUpContainer = styled.div<any>`
   padding: 12px 13px;
@@ -10,7 +15,8 @@ export const ScrollUpContainer = styled.div<any>`
   position: fixed;
   z-index: 10;
   cursor: pointer;
-  background-color: ${COLOR_LIGHT_BLUE};
+  background-color: ${({ darkTheme }) =>
+    darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
   text-align: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
@@ -24,7 +30,7 @@ export const ScrollUpContainer = styled.div<any>`
     height: 15px;
 
     path {
-      stroke: ${COLOR_BLACK};
+      stroke: ${({ darkTheme }) => (darkTheme ? COLOR_BLACK : COLOR_WHITE)};
     }
 
     @media ${devices.tabletM} {

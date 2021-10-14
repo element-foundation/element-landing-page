@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLOR_WHITE } from "lib/colorPalette";
+import { COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
 
 export const BurgerMenuContainer = styled.div<any>`
   width: 27px;
@@ -15,7 +15,8 @@ export const BurgerMenuContainer = styled.div<any>`
     display: block;
     height: 3px;
     width: 100%;
-    background-color: ${COLOR_WHITE};
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
     transition-timing-function: ease;
     transition-duration: 0.5s;
     border-radius: 0px;

@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import SEO from "next-seo.config";
+import { ThemeProvider } from "next-themes";
 
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
@@ -17,22 +18,23 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content={PreviewImage.src} key="ogimage" />
         <meta property="og:url" content="Website url here" />
-               <meta
-                 property="og:description"
-                 content={
-                   "Element is an open source protocol for fixed and variable yield markets"
-                 }
-                 key="ogdescription"
-               />
-
+        <meta
+          property="og:description"
+          content={
+            "Element is an open source protocol for fixed and variable yield markets"
+          }
+          key="ogdescription"
+        />
       </Head>
-      <GlobalStyle />
-      <Header />
-      <DefaultSeo {...SEO} />
-      <div className="main">
-        <Component {...pageProps} />
-      </div>
-      <Footer />
+      <ThemeProvider>
+        <GlobalStyle />
+        <Header />
+        <DefaultSeo {...SEO} />
+        <div className="main">
+          <Component {...pageProps} />
+        </div>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }

@@ -7,9 +7,8 @@ import {
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
-export const VaultsContainer = styled.div`
+export const VaultsContainer = styled.div<any>`
   h3 {
-    color: ${COLOR_WHITE};
     margin-bottom: 5rem;
   }
 `;
@@ -32,12 +31,15 @@ export const GridContainer = styled.div<any>`
   }
 `;
 
-export const VaultsItemContainer = styled.div`
-  background: linear-gradient(
+export const VaultsItemContainer = styled.div<any>`
+  background: ${({ darkTheme }) =>
+    darkTheme
+      ? `linear-gradient(
     180deg,
     ${COLOR_LIGHT_BLUE},
     ${COLOR_DARKER_BLUE}
-  );
+  )`
+      : COLOR_LIGHT_BLUE};
   border-radius: 10px;
   padding: 55px 23px;
   display: flex;
@@ -58,6 +60,7 @@ export const VaultsItemContainer = styled.div`
     position: absolute;
     bottom: 12px;
     margin: 0;
+    color: ${COLOR_WHITE};
   }
 
   @media ${devices.mobileL} {

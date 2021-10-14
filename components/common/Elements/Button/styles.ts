@@ -1,7 +1,7 @@
 import {
   COLOR_BLACK,
+  COLOR_DARK_BLUE,
   COLOR_LIGHT_BLUE,
-  COLOR_LIGHT_BUTTON,
   COLOR_WHITE,
 } from "lib/colorPalette";
 import styled from "styled-components";
@@ -10,12 +10,12 @@ interface PrimaryButtonContainerProps {
   variant: string;
   hasArrow?: boolean;
   isLoading?: boolean;
+  darkTheme: boolean;
 }
 
 export const ArrowContainer = styled.div`
   width: 32px;
   height: 32px;
-  background-color: ${COLOR_BLACK};
   align-items: center;
   text-align: center;
   display: flex;
@@ -25,10 +25,16 @@ export const ArrowContainer = styled.div`
 `;
 
 export const PrimaryButtonContainer = styled.button<PrimaryButtonContainerProps>`
-  background-color: ${({ variant }) =>
-    variant === "primary" ? COLOR_LIGHT_BLUE : COLOR_LIGHT_BUTTON};
+  background-color: ${({ variant, darkTheme }) =>
+    variant === "primary" && darkTheme
+      ? COLOR_LIGHT_BLUE
+      : variant === "secondary" && darkTheme
+      ? COLOR_BLACK
+      : variant === "secondary" && !darkTheme
+      ? COLOR_WHITE
+      : COLOR_DARK_BLUE};
   padding: ${({ hasArrow, isLoading }) =>
-    hasArrow ? "16px 27px" : isLoading ? "13.5px 28px" : "16px 28px"};
+    hasArrow ? "16px 27px" : isLoading ? "17.5px 28px" : "20px 28px"};
   box-sizing: border-box;
   transition: 0.3s background-color, 0.3s transform;
   border-radius: 32px;
@@ -39,10 +45,28 @@ export const PrimaryButtonContainer = styled.button<PrimaryButtonContainerProps>
 
   span {
     font-family: "Rubik Medium", Verdana, sans‑serif;
-    color: ${({ variant }) =>
-      variant === "primary" ? COLOR_BLACK : COLOR_WHITE};
+    color: ${({ variant, darkTheme }) =>
+      variant === "primary" && darkTheme
+        ? COLOR_BLACK
+        : variant === "secondary" && darkTheme
+        ? COLOR_WHITE
+        : variant === "secondary" && !darkTheme
+        ? COLOR_BLACK
+        : COLOR_WHITE};
     margin: 0;
     font-size: 1rem;
+  }
+
+  ${ArrowContainer} {
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_BLACK : COLOR_WHITE};
+
+    svg {
+      path {
+        fill: ${({ darkTheme }) =>
+          darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
+      }
+    }
   }
 
   &:hover,

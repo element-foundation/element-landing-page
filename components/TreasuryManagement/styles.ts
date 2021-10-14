@@ -1,4 +1,5 @@
 import { Flex } from "components/common/Elements/Container/styles";
+import { COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -15,7 +16,7 @@ export const CircleContainer = styled.div`
   @media ${devices.tabletM} {
     width: calc(100vw - 6rem);
     height: calc(100vw - 6rem);
-    margin-top: 4rem;
+    margin-bottom: 6rem;
   }
 `;
 
@@ -29,11 +30,9 @@ export const FlexWrapper = styled(Flex)`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12%;
+    margin-top: 6rem;
 
-    @media ${devices.tabletM} {
-      margin-top: 0;
-    }
+
   }
 
   @media (max-width: 1440px) {
@@ -45,12 +44,12 @@ export const FlexWrapper = styled(Flex)`
   }
 
   @media ${devices.tabletM} {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<any>`
   max-width: 27rem;
   width: 100%;
   height: 100%;
@@ -75,7 +74,8 @@ export const ContentWrapper = styled.div`
 
   p {
     text-align: start;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
     margin-top: 0.5rem;
+    color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE)};
   }
 `;

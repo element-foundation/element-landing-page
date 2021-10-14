@@ -1,3 +1,4 @@
+import { COLOR_DARK_BLUE, COLOR_LIGHT_BLUE, COLOR_WHITE } from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
@@ -5,7 +6,7 @@ export const HeroSectionText = styled.p`
   margin: 2.625rem 0 3.625rem 0;
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<any>`
   max-width: 33rem;
 
   @media ${devices.tabletL} {
@@ -18,6 +19,16 @@ export const ContentWrapper = styled.div`
 
   @media ${devices.tabletM} {
     max-width: 100%;
+  }
+
+  h1 {
+    color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
+  }
+
+  p {
+    color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
   }
 `;
 

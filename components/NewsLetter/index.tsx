@@ -1,5 +1,6 @@
 import { Slide } from "react-awesome-reveal";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { postData } from "lib/fetcher";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
@@ -16,6 +17,9 @@ export const NewsLetter = () => {
   const [emailValue, setEmailValue] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmailValue(event.target.value);
@@ -41,16 +45,22 @@ export const NewsLetter = () => {
     [emailValue, submitted]
   );
 
+  if (!mounted) return null;
+
   return (
     <SectionContainer gridColumn="1/13">
       <Slide direction="up" duration={1500}>
-        <NewsLetterContainer autoComplete="off" onSubmit={handleSubmit}>
+        <NewsLetterContainer
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          darkTheme={resolvedTheme === "dark"}
+        >
           <FlexWrapper>
             <MainContent>
               <h4>
                 {submitted
                   ? "Contgratulations! You've subscribed"
-                  : "Subscribe to our newsletter "}
+                  : "Subscribe to our newsletter"}
               </h4>
               {!submitted && (
                 <p>
@@ -71,6 +81,7 @@ export const NewsLetter = () => {
                 text={submitted ? "Thank you" : "Subscribe"}
                 variant="secondary"
                 isLoading={isLoading}
+                darkTheme={resolvedTheme === "dark"}
               />
             </ElementsContainer>
           </FlexWrapper>

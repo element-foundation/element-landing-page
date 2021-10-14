@@ -3,13 +3,8 @@ import { ContentWrapper } from "components/GrowSavings/styles";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
-interface CircleProps {
-  size: string;
-}
-
 export const FlexWrapper = styled(Flex)`
   max-width: 72rem;
-  height: 600px;
   flex-direction: row;
   align-items: center;
   display: flex;
@@ -32,7 +27,6 @@ export const FlexWrapper = styled(Flex)`
     }
   }
 
-
   @media ${devices.tabletM} {
     flex-direction: column;
     margin-top: 12rem;
@@ -40,7 +34,7 @@ export const FlexWrapper = styled(Flex)`
 
     .image-container {
       height: 100%;
-      margin: 10rem 0 4rem 0;
+      margin: 6rem 0 0 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -90,37 +84,5 @@ export const BuildElementWrapper = styled.section`
       background-position: center;
       padding: 0;
     }
-  }
-`;
-
-export const Circle = styled.div<CircleProps>`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: ${({ size }) => (size === "small" ? "300px" : "686px")};
-  max-height: ${({ size }) => (size === "small" ? "300px" : "686px")};
-  left: ${({ size }) => (size !== "small" ? "50%" : "76%")};
-  top: ${({ size }) => size === "small" && "-55%"};
-  bottom: ${({ size }) => size !== "small" && "86%"};
-  border-radius: 50%;
-  background: conic-gradient(
-    from 180deg at 50% 50%,
-    rgba(255, 255, 255, 0.16) 0deg,
-    rgba(255, 255, 255, 0) 360deg
-  );
-  transform: rotate(90deg);
-
-  @media ${devices.tabletL} {
-    left: ${({ size }) => size === "small" && "55%"};
-    top: ${({ size }) => size === "small" && "-8%"};
-  }
-
-  @media ${devices.tabletM} {
-    left: ${({ size }) => size === "small" && "58%"};
-    top: ${({ size }) => size === "small" && "-52%"};
-  }
-
-  @media ${devices.mobileL} {
-    display: ${({ size }) => size === "small" && "none"};
   }
 `;

@@ -1,6 +1,8 @@
 import { Slide } from "react-awesome-reveal";
 import CountUp from "react-countup";
 import useSWR from "swr";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import fetcher from "lib/fetcher";
 import Image from "next/image";
 import { SectionContainer } from "components/common/Elements/Container";
@@ -11,20 +13,33 @@ import {
   MainContent,
 } from "components/StatsSection/styles";
 
-import TotalValue from "public/assets/svg/TotalValue.svg";
-import Liquidity from "public/assets/svg/Liquidity.svg";
-import Globe from "public/assets/svg/Globe.svg";
+import TotalValueDark from "public/assets/svg/Stats/TotalValueDark.svg";
+import TotalValueLight from "public/assets/svg/Stats/TotalValueLight.svg";
+import LiquidityDark from "public/assets/svg/Stats/LiquidityDark.svg";
+import LiquidityLight from "public/assets/svg/Stats/LiquidityLight.svg";
+import GlobeDark from "public/assets/svg/Stats/GlobeDark.svg";
+import GlobeLight from "public/assets/svg/Stats/GlobeLight.svg";
 
 export const StatsSection = () => {
   const { data } = useSWR("/api/get-tvl", fetcher);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <SectionContainer gridColumn="1/13" textAlign="start" padding="0">
       <Slide direction="up" duration={1500} triggerOnce>
-        <MainContent>
+        <MainContent darkTheme={resolvedTheme === "dark"}>
           <Flex>
             <IconContainer>
-              <Image src={TotalValue} alt="SVG Illustration" />
+              <Image
+                src={
+                  resolvedTheme === "dark" ? TotalValueDark : TotalValueLight
+                }
+                alt="SVG Illustration"
+              />
             </IconContainer>
             <StatsContent>
               <h2>
@@ -41,7 +56,12 @@ export const StatsSection = () => {
           </Flex>
           <Flex>
             <IconContainer>
-              <Image src={Liquidity} alt="SVG Illustration" />
+              <Image
+                src={
+                  resolvedTheme === "dark" ? LiquidityDark : LiquidityLight
+                }
+                alt="SVG Illustration"
+              />
             </IconContainer>
             <StatsContent>
               <h2>
@@ -52,7 +72,12 @@ export const StatsSection = () => {
           </Flex>
           <Flex>
             <IconContainer>
-              <Image src={Globe} alt="SVG Illustration" />
+              <Image
+                src={
+                  resolvedTheme === "dark" ? GlobeDark : GlobeLight
+                }
+                alt="SVG Illustration"
+              />
             </IconContainer>
             <StatsContent>
               <h2>

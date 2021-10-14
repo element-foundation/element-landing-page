@@ -1,4 +1,5 @@
 const breakPoints = {
+  mobileM: "375px",
   mobileL: "576px",
   tabletM: "768px",
   desktopM: "992px",
@@ -8,6 +9,7 @@ const breakPoints = {
 };
 
 export const devices = {
+  mobileM: `(max-width: ${breakPoints.mobileM})`,
   mobileL: `(max-width: ${breakPoints.mobileL})`,
   tabletM: `(max-width: ${breakPoints.tabletM})`,
   desktopM: `(max-width: ${breakPoints.desktopM})`,

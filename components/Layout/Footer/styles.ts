@@ -1,6 +1,16 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { devices } from "lib/devices";
-import { COLOR_LIGHT_BLUE, COLOR_WHITE } from "lib/colorPalette";
+import {
+  COLOR_DARK_BACKGROUND,
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_LIGHT_FOOTER,
+  COLOR_WHITE,
+} from "lib/colorPalette";
+
+interface StringProps {
+  [name: string]: string | React.ReactNode;
+}
 
 export const FooterMain = styled.section`
   display: grid;
@@ -30,14 +40,26 @@ export const FooterMain = styled.section`
   }
 `;
 
-export const Formality = styled.p`
+export const Formality = styled.p<any>`
   display: flex;
+  color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_LIGHT_FOOTER)};
 `;
 
-export const LinkContainer = styled.div`
+export const LinkContainer = styled.div<any>`
   h3 {
     margin: 0 0 24px 0;
-    color: ${COLOR_LIGHT_BLUE};
+    color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
+  }
+
+  button {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 2rem;
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
   }
 
   .large-screen-logo {
@@ -56,10 +78,11 @@ export const LinkContainer = styled.div`
     margin: 15px 0;
     font-family: "Rubik Regular", Verdana, sans‑serif;
     transition: all 0.3s;
-    color: ${COLOR_WHITE};
+    color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_LIGHT_FOOTER)};
 
     &:hover {
-      color: ${COLOR_LIGHT_BLUE};
+      color: ${({ darkTheme }) =>
+        darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE};
     }
   }
 
@@ -84,3 +107,9 @@ export const SmallScreen = styled.div`
     padding-bottom: 4rem;
   }
 `;
+
+export const StyledHTML = createGlobalStyle<StringProps>` 
+  body {
+        background-color: ${({ darkTheme }) =>
+          darkTheme ? COLOR_DARK_BACKGROUND : COLOR_WHITE};   
+}`;

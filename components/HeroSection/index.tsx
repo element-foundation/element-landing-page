@@ -1,5 +1,7 @@
 import { Slide } from "react-awesome-reveal";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { PrimaryButton } from "components/common/Elements/Button";
 import { SectionContainer } from "components/common/Elements/Container";
 import { ExternalLink } from "components/common/Elements/ExternalLink";
@@ -14,29 +16,32 @@ import {
 
 import HeroStrobe from "public/assets/svg/HeroStrobe.svg";
 import HeroAnimationDark from "public/assets/lotties/HeroAnimationDark.json";
+import HeroAnimationLight from "public/assets/lotties/HeroAnimationLight.json";
 
 export const HeroSection = () => {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  useEffect(() => setMounted(true), []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: HeroAnimationDark,
+    animationData:
+      resolvedTheme === "dark" ? HeroAnimationDark : HeroAnimationLight,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
 
+  if (!mounted) return null;
+
   return (
-    <SectionContainer
-      padding="18rem 0"
-      gridColumn="1/13"
-      textAlign="start"
-      id="fixed-apr"
-    >
+    <SectionContainer padding="18rem 0" gridColumn="1/13" textAlign="start">
       <Slide direction="left" duration={2000} triggerOnce>
         <FlexWrapper heroSection={true}>
-          <ContentWrapper>
+          <ContentWrapper darkTheme={resolvedTheme === "dark"}>
             <h1>
-              The fixed rate <Break />
+              Defi’s largest fixed rate <Break />
               protocol
             </h1>
             <HeroSectionText>
@@ -49,12 +54,13 @@ export const HeroSection = () => {
                   variant="primary"
                   text="Start earning"
                   hasArrow={true}
+                  darkTheme={resolvedTheme === "dark"}
                 />
               </div>
             </ExternalLink>
           </ContentWrapper>
           <div className="image-container">
-            <Lottie options={defaultOptions} height={"100%"} width={450} />
+            <Lottie options={defaultOptions} height={"100%"} width="100%" />
           </div>
         </FlexWrapper>
       </Slide>

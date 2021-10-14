@@ -1,10 +1,14 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_LIGHT_BLUE, COLOR_YELLOW } from "lib/colorPalette";
+import {
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_WHITE,
+} from "lib/colorPalette";
 import { devices } from "lib/devices";
 import styled from "styled-components";
 
 interface SectionTitleProps {
-  variant?: string;
+  darkTheme: boolean;
 }
 
 export interface AbsoluteProps {
@@ -20,29 +24,30 @@ export const FlexWrapper = styled(Flex)`
   margin: ${({ heroSection }) => (heroSection ? "0 auto 0 0" : "0 auto")};
   flex-direction: row;
 
+  .image-container {
+    max-width: 450px;
+    width: 50%;
+    display: flex;
+  }
+
   @media ${devices.tabletM} {
     flex-direction: ${({ heroSection }) =>
       heroSection ? "column" : "column-reverse"};
 
     .image-container {
-      margin-top: 6rem;
-    }
-  }
+      @media ${devices.tabletM} {
+        width: 100%;
+        margin-top: 2rem;
+      }
 
-  .image-container {
-    @media ${devices.tabletL} {
-      max-width: 30vw;
-      width: 100%;
-    }
-
-    @media ${devices.tabletM} {
-      max-width: 100%;
-      width: 100%;
+      @media ${devices.mobileL} {
+        margin-top: 4rem;
+      }
     }
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<any>`
   width: 100%;
   max-width: 33rem;
   display: flex;
@@ -53,6 +58,7 @@ export const ContentWrapper = styled.div`
     text-align: start;
     margin-bottom: 3rem;
     margin-top: 0.5rem;
+    color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE)};
   }
 
   @media ${devices.tabletL} {
@@ -67,8 +73,7 @@ export const ContentWrapper = styled.div`
 
 export const SectionTitle = styled.h3<SectionTitleProps>`
   font-size: 2.5em;
-  color: ${({ variant }) =>
-    variant === "primary" ? COLOR_LIGHT_BLUE : COLOR_YELLOW};
+  color: ${({ darkTheme }) => (darkTheme ? COLOR_LIGHT_BLUE : COLOR_DARK_BLUE)};
 
   @media ${devices.desktopM} {
     font-size: 2.275rem;
