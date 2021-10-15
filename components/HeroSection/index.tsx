@@ -41,7 +41,7 @@ export const HeroSection = () => {
         <FlexWrapper heroSection={true}>
           <ContentWrapper darkTheme={resolvedTheme === "dark"}>
             <h1>
-              Defi’s largest fixed rate <Break />
+              Defi’s fixed rate <Break />
               protocol
             </h1>
             <HeroSectionText>
