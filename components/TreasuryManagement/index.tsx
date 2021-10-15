@@ -44,7 +44,7 @@ export const TreasuryManagement = () => {
                 yield on treasury capital while maintaining the ability to exit
                 if needed.
               </p>
-              <ExternalLink href="https://www.google.com">
+              <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform">
                 <div>
                   <PrimaryButton
                     variant="primary"

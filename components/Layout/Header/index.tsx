@@ -60,22 +60,22 @@ export const Header = () => {
             <p>Fixed Rates</p>
           </StyledLink>
         </ExternalLink>
-        <ExternalLink href="https://app.element.fi/mint">
+        <ExternalLink href="https://app.element.fi/mint/">
           <StyledLink>
             <p>Mint & LP</p>
           </StyledLink>
         </ExternalLink>
-        <ExternalLink href="https://app.element.fi/pools">
+        <ExternalLink href="https://app.element.fi/pools/">
           <StyledLink>
             <p>Pools</p>
           </StyledLink>
         </ExternalLink>
-        <ExternalLink href="https://github.com/element-fi/elf-sdk">
+        <ExternalLink href="https://github.com/element-fi/elf-sdk/">
           <StyledLink>
             <p>Build</p>
           </StyledLink>
         </ExternalLink>
-        <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform">
+        <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform/">
           <StyledLink>
             <p>Treasury Management</p>
           </StyledLink>

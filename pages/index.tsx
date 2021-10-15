@@ -1,4 +1,5 @@
 import ScrollToTop from "components/common/ScrollToTop";
+import ChangeTheme from "components/common/ChangeTheme";
 import { HeroSection } from "components/HeroSection";
 import { StatsSection } from "components/StatsSection";
 import { NewsLetter } from "components/NewsLetter";
@@ -12,6 +13,7 @@ import { Investors } from "components/Investors";
 const Home = () => (
   <>
     <ScrollToTop />
+    <ChangeTheme />
     <HeroSection />
     <StatsSection />
     <GrowSavings />

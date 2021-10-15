@@ -16,6 +16,9 @@ export const CircleContainer = styled.div`
   @media ${devices.tabletM} {
     width: calc(100vw - 6rem);
     height: calc(100vw - 6rem);
+  }
+
+  @media ${devices.mobileL} {
     margin-bottom: 6rem;
   }
 `;
@@ -23,20 +26,14 @@ export const CircleContainer = styled.div`
 export const FlexWrapper = styled(Flex)`
   margin: auto auto 0 0;
   flex-direction: row;
-  height: 668px;
+  height: 100%;
   justify-content: space-around;
 
   .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
-
-
-  }
-
-  @media (max-width: 1440px) {
-    margin: -3rem auto 0 0;
+    margin-top: 12rem;
   }
 
   @media ${devices.tabletL} {
@@ -57,11 +54,11 @@ export const ContentWrapper = styled.div<any>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 8%;
+  margin-top: 7rem;
 
   @media ${devices.tabletM} {
-    margin-top: 0%;
     max-width: 100%;
+    margin-top: 6rem;
 
     h3 {
       max-width: 27rem;
@@ -69,7 +66,7 @@ export const ContentWrapper = styled.div<any>`
   }
 
   @media ${devices.mobileL} {
-    margin-top: 12%;
+    margin: 8rem 0 5rem 0;
   }
 
   p {

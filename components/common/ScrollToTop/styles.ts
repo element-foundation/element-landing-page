@@ -10,9 +10,8 @@ import {
 export const ScrollUpContainer = styled.div<any>`
   padding: 12px 13px;
   position: fixed;
-  right: 30px;
+  right: 90px;
   bottom: 30px;
-  position: fixed;
   z-index: 10;
   cursor: pointer;
   background-color: ${({ darkTheme }) =>
@@ -39,29 +38,15 @@ export const ScrollUpContainer = styled.div<any>`
     }
   }
 
-  &:hover,
-  &:active,
-  &:focus {
+  @media ${devices.tabletL} {
+    right: 80px;
+    bottom: 20px;
+    padding: 10px;
   }
 
   @media ${devices.mobileL} {
-    right: 10px;
-    bottom: 10px;
-  }
-
-  @media ${devices.tabletM} {
-    right: 5px;
-    bottom: 5px;
-  }
-
-  @media ${devices.desktopM} {
-    right: 15px;
-    bottom: 15px;
-  }
-
-  @media ${devices.tabletL} {
     right: 20px;
-    bottom: 20px;
+    bottom: 80px;
     padding: 10px;
   }
 `;

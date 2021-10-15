@@ -34,7 +34,7 @@ export const FixedHeader = styled.header<any>`
   top: 0;
   left: 0;
   right: 0;
-  padding: ${({ changeColor }) => (changeColor ? "2rem 0" : "4.5rem 0")};
+  padding: ${({ changeColor }) => (changeColor ? "1rem 0" : "4.5rem 0")};
   z-index: 10;
   transition: all 0.3s;
   background-color: ${({ darkTheme }) =>
@@ -44,7 +44,7 @@ export const FixedHeader = styled.header<any>`
   backdrop-filter: saturate(180%) blur(5px);
 
   @media ${devices.tabletM} {
-    padding: 1.5rem 0;
+    padding: ${({ changeColor }) => (changeColor ? "0" : "1.5rem 0")};
   }
 
   img {
@@ -69,6 +69,10 @@ export const FixedHeader = styled.header<any>`
 `;
 
 export const MenuItemContainer = styled(Flex)`
+  div {
+    transform: scale(1) !important;
+  }
+
   @media (max-width: 1200px) {
     display: none;
   }
@@ -78,6 +82,10 @@ export const NavigationPrimary = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
+
+  div {
+    transform: scale(1) !important;
+  }
 
   hr {
     display: none;
@@ -89,7 +97,8 @@ export const NavigationPrimary = styled.div`
   }
   button {
     margin-top: 2rem;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
     span {
       font-size: 30px;
