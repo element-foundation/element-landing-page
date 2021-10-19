@@ -75,7 +75,7 @@ export const Header = () => {
             <p>Build</p>
           </StyledLink>
         </ExternalLink>
-        <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSd0y1RrxWy5UNZZ3Pfoeb7CWqb2_svgAngqBQKstGaeE1OMGg/viewform/">
+        <ExternalLink href="https://forms.gle/QPfiGKhYBir26AAv7">
           <StyledLink>
             <p>Treasury Management</p>
           </StyledLink>
