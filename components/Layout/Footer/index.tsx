@@ -81,6 +81,9 @@ export const Footer = () => {
               <ExternalLink href="https://medium.com/element-finance/how-to-access-high-fixed-apr-on-usd-eth-and-btc-in-4-minutes-641f057e283b">
                 Tutorial
               </ExternalLink>
+              <ExternalLink href="https://github.com/element-fi/brand-assets">
+                Brand Assets and Logo
+              </ExternalLink>
               <ExternalLink href="https://medium.com/element-finance/fixed-rate-interest-markets-a-casual-users-journey-through-fixed-rate-interest-using-element-50f420df1859">
                 Guide to Fixed Interest
               </ExternalLink>
