@@ -59,10 +59,10 @@ export const GrowSavings = () => {
               <p>
                 When you purchase Element Principal Tokens, you receive a fixed
                 rate token that you buy and hold until the day of the term end
-                date. One this term has ended, you have the ability redeem your
+                date. Once this term has ended, you have the ability to redeem your
                 token and earned APR. Our Principal Tokens have no minimums and
                 no penalties. You can trade your Principal Token back for it’s
-                base asset at any time,
+                base asset at any time.
               </p>
               <ExternalLink href="https://app.element.fi/fixedrates/">
                 <div>
