@@ -31,6 +31,26 @@ import poly from "public/assets/svg/Investors/poly.svg";
 
 const investorsData = [
   {
+    investorTitle: "polychain",
+    investorImage: poly,
+    height: "40px",
+  },
+  {
+    investorTitle: "a16z",
+    investorImage: a16z,
+    height: "35px",
+  },
+  {
+    investorTitle: "republic",
+    investorImage: republic,
+    height: "36px",
+  },
+  {
+    investorTitle: "Advanced Blockchain",
+    investorImage: advanced_blockchain,
+    height: "41px",
+  },
+  {
     investorTitle: "Ethereal Ventures",
     investorImage: Venture,
     height: "9px",
@@ -46,14 +66,19 @@ const investorsData = [
     height: "37px",
   },
   {
-    investorTitle: "a16z",
-    investorImage: a16z,
-    height: "35px",
+    investorTitle: "Rarestone",
+    investorImage: Rarestone,
+    height: "31px",
   },
   {
     investorTitle: "Scalar Capital",
     investorImage: scalar_capital,
     height: "38px",
+  },
+  {
+    investorTitle: "Femboy Capital",
+    investorImage: femboy_capital,
+    height: "19px",
   },
   {
     investorTitle: "Placeholder",
@@ -64,6 +89,10 @@ const investorsData = [
     investorTitle: "a_capital",
     investorImage: a_capital,
     height: "28px",
+  },
+  {
+    investorTitle: "yc",
+    investorImage: yc,
   },
   {
     investorTitle: "SVAngel",
