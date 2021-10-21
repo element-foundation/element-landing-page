@@ -65,9 +65,9 @@ export const StatsSection = () => {
             </IconContainer>
             <StatsContent>
               <h2>
-                <CountUp start={0} end={5} duration={2.3} />M
+                <CountUp start={0} end={87} duration={2.3} />M
               </h2>
-              <p>Average Liquidity Per Pool</p>
+              <p>Total Trading Volume</p>
             </StatsContent>
           </Flex>
           <Flex>
