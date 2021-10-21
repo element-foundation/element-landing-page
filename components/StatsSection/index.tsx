@@ -65,9 +65,9 @@ export const StatsSection = () => {
             </IconContainer>
             <StatsContent>
               <h2>
-                <CountUp start={0} end={87} duration={2.3} />M
+                <CountUp start={0} end={11} duration={2.3} />M
               </h2>
-              <p>Total Trading Volume</p>
+              <p>Fixed Rate Assets</p>
             </StatsContent>
           </Flex>
           <Flex>
