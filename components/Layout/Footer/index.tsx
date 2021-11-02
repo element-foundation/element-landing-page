@@ -87,6 +87,9 @@ export const Footer = () => {
               <ExternalLink href="https://medium.com/element-finance/fixed-rate-interest-markets-a-casual-users-journey-through-fixed-rate-interest-using-element-50f420df1859">
                 Guide to Fixed Interest
               </ExternalLink>
+              <ExternalLink href="https://immunefi.com/bounty/elementfinance/">
+                Bug Bounty
+              </ExternalLink>
             </LinkContainer>
             <LinkContainer darkTheme={resolvedTheme === "dark"}>
               <h3>Social</h3>
