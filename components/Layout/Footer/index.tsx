@@ -71,7 +71,7 @@ export const Footer = () => {
               </ExternalLink>
             </LinkContainer>
             <LinkContainer darkTheme={resolvedTheme === "dark"}>
-              <h3>Learn</h3>
+              <h3>Build</h3>
               <ExternalLink href="https://docs.element.fi/">
                 Documentation
               </ExternalLink>
@@ -92,7 +92,7 @@ export const Footer = () => {
               </ExternalLink>
             </LinkContainer>
             <LinkContainer darkTheme={resolvedTheme === "dark"}>
-              <h3>Social</h3>
+              <h3>Community</h3>
               <ExternalLink href="https://discord.com/invite/8JnDyXJJWh">
                 Discord
               </ExternalLink>
