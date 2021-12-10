@@ -11,7 +11,7 @@ const TreasuryManagement = () => (
       title="Element Treasury Management"
       text="Element is the perfect treasury diversification solution allowing Protocols, DAOs, and organizations to earn fixed rate yield on treasury capital while maintaining the ability to exit if needed."
       buttonText="Learn more"
-      buttonHref="https://app.element.fi/fixedrates"
+      buttonHref="https://medium.com/element-finance/introducing-elements-treasury-management-initiative-bbebbd99f89"
       hasArrow
       darkLottie={VaultAnimationDark}
       lightLottie={VaultAnimationDark}
