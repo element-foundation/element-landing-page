@@ -1,8 +1,8 @@
-import { Flex } from "components/common/Elements/Container/styles";
-import { AbsoluteSVGContainer } from "components/GrowSavings/styles";
-import { VaultProps } from "components/OurVaults";
-import { VaultsItemContainer } from "components/OurVaults/styles";
 import Image from "next/image";
+import { Flex } from "components/common/Elements/Container/styles";
+import { AbsoluteSVGContainer } from "components/LeftSection/styles";
+import { VaultsItemContainer } from "components/OurVaults/styles";
+import { VaultProps } from "lib/types";
 
 import Rainbow from "public/assets/svg/Currencies/Rainbow.svg";
 import Return from "public/assets/png/Currencies/Return.png";

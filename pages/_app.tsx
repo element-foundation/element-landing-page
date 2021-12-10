@@ -1,9 +1,10 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
-import SEO from "next-seo.config";
 import { ThemeProvider } from "next-themes";
+import SEO from "next-seo.config";
 
+import { Transition } from "components/Layout/Transition";
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
 import { Header } from "components/Layout/Header";
@@ -11,7 +12,7 @@ import { Footer } from "components/Layout/Footer";
 
 import PreviewImage from "public/assets/png/Preview.png";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -28,11 +29,13 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider>
         <GlobalStyle />
-        <Header />
         <DefaultSeo {...SEO} />
-        <div className="main">
-          <Component {...pageProps} />
-        </div>
+        <Header />
+        <Transition location={router.pathname}>
+          <div className="main">
+            <Component {...pageProps} />
+          </div>
+        </Transition>
         <Footer />
       </ThemeProvider>
     </>

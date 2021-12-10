@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
+import { StringProps } from "lib/types";
 
-export const BurgerMenuContainer = styled.div<any>`
+export const BurgerMenuContainer = styled.div<StringProps>`
   width: 27px;
   display: flex;
   z-index: 10;
@@ -25,14 +26,14 @@ export const BurgerMenuContainer = styled.div<any>`
   }
 `;
 
-export const FirstLine = styled("span")<any>`
+export const FirstLine = styled.span<StringProps>`
   transform: ${({ isOpen }) =>
     `translate3d(0,${isOpen ? "7px" : "0px"},0) rotate(${
       isOpen ? `45deg` : "0"
     })`};
 `;
 
-export const SecondLine = styled("span")<any>`
+export const SecondLine = styled.span<StringProps>`
   transform: ${({ isOpen }) =>
     `translate3d(0,${isOpen ? "7px" : "14px"},0) rotate(${
       isOpen ? `-45deg` : "0"

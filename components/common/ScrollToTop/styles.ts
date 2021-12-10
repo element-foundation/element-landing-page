@@ -6,8 +6,9 @@ import {
   COLOR_LIGHT_BLUE,
   COLOR_WHITE,
 } from "lib/colorPalette";
+import { StringProps } from "lib/types";
 
-export const ScrollUpContainer = styled.div<any>`
+export const ScrollUpContainer = styled.div<StringProps>`
   padding: 12px 13px;
   position: fixed;
   right: 90px;
@@ -23,6 +24,32 @@ export const ScrollUpContainer = styled.div<any>`
   opacity: ${({ show }) => (show ? "1" : "0")};
   display: flex;
   border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: ${({ darkTheme }) =>
+        darkTheme
+          ? `0 0 0 0 ${COLOR_LIGHT_BLUE}`
+          : `0 0 0 0 ${COLOR_DARK_BLUE}`};
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  &:hover {
+    transform: scale(1);
+    animation: pulse 2s infinite;
+  }
 
   svg {
     width: 15px;

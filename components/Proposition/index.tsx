@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { SectionContainer } from "components/common/Elements/Container";
 import { Flex } from "components/common/Elements/Container/styles";
 import { MainContent } from "components/StatsSection/styles";
-import { AbsoluteSVGContainer } from "components/GrowSavings/styles";
+import { AbsoluteSVGContainer } from "components/LeftSection/styles";
 import {
   PropositionText,
   SaleFlex,
@@ -26,7 +26,7 @@ export const Proposition = () => {
   if (!mounted) return null;
 
   return (
-    <SectionContainer gridColumn="1/13" textAlign="start" padding="4rem 0 0 0">
+    <SectionContainer textAlign="start" padding="4rem 0 0 0">
       <Fade duration={2500} delay={500} triggerOnce>
         <MainContent darkTheme={resolvedTheme === "dark"}>
           <Flex direction="column">

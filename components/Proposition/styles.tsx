@@ -4,7 +4,7 @@ import { COLOR_WHITE } from "lib/colorPalette";
 import {
   AbsoluteProps,
   AbsoluteSVGContainer,
-} from "components/GrowSavings/styles";
+} from "components/LeftSection/styles";
 import { devices } from "lib/devices";
 
 export const AbsoluteMobileSVGContainer = styled.div<AbsoluteProps>`

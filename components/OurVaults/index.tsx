@@ -6,7 +6,7 @@ import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
   SectionTitle,
-} from "components/GrowSavings/styles";
+} from "components/LeftSection/styles";
 import {
   GridContainer,
   ValuesWrapper,
@@ -19,11 +19,7 @@ import ETH from "public/assets/svg/Currencies/ETH.svg";
 import USDC from "public/assets/svg/Currencies/USDC.svg";
 import DAI from "public/assets/svg/Currencies/DAI.svg";
 import LUSD from "public/assets/svg/Currencies/LUSD.svg";
-
-export interface VaultProps {
-  [name: string]: any;
-  darkTheme?: boolean;
-}
+import { VaultProps } from "lib/types";
 
 const vaultData = [
   {
@@ -81,7 +77,7 @@ export const OurVaults = () => {
       >
         <div className="DecorativeLine" />
       </AbsoluteSVGContainer>
-      <SectionContainer gridColumn="1/13" padding="0">
+      <SectionContainer padding="0">
         <Fade duration={2500} delay={200} triggerOnce>
           <VaultsContainer darkTheme={resolvedTheme === "dark"}>
             <SectionTitle darkTheme={resolvedTheme === "dark"}>

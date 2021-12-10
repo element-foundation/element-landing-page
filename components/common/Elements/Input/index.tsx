@@ -1,11 +1,5 @@
+import { InputProps } from "lib/types";
 import { Input } from "./styles";
-
-interface InputProps {
-  placeholder: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  name: string;
-  type: string;
-}
 
 export const PrimaryInput = ({
   placeholder,

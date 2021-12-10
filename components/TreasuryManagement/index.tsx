@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { SectionContainer } from "components/common/Elements/Container";
-import { SectionTitle } from "components/GrowSavings/styles";
+import { SectionTitle } from "components/LeftSection/styles";
 import {
   CircleContainer,
   FlexWrapper,
@@ -22,12 +22,7 @@ export const TreasuryManagement = () => {
   if (!mounted) return null;
 
   return (
-    <SectionContainer
-      gridColumn="1/13"
-      textAlign="start"
-      hasOverflow={true}
-      padding="0"
-    >
+    <SectionContainer textAlign="start" padding="0" hasOverflow>
       <Fade duration={2500} delay={500} triggerOnce>
         <FlexWrapper>
           <div className="image-container">
@@ -44,15 +39,16 @@ export const TreasuryManagement = () => {
                 yield on treasury capital while maintaining the ability to exit
                 if needed.
               </p>
-              <ExternalLink href="https://forms.gle/QPfiGKhYBir26AAv7">
-                <div>
-                  <PrimaryButton
-                    variant="primary"
-                    text="Contact us"
-                    hasArrow={true}
-                    darkTheme={resolvedTheme === "dark"}
-                  />
-                </div>
+              <ExternalLink
+                href="https://forms.gle/QPfiGKhYBir26AAv7"
+                noUnderline
+              >
+                <PrimaryButton
+                  variant="primary"
+                  text="Contact us"
+                  hasArrow={true}
+                  darkTheme={resolvedTheme === "dark"}
+                />
               </ExternalLink>
             </ContentWrapper>
           </CircleContainer>

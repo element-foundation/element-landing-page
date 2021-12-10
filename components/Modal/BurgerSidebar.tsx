@@ -7,13 +7,7 @@ import {
   BurgerSidebarWrapper,
   BurgerSidebarOverlay,
 } from "./styles";
-
-export interface BurgerSidebarProps {
-  open: boolean;
-  children: React.ReactNode;
-  handleClose: () => void;
-  darkTheme: boolean;
-}
+import { BurgerSidebarProps } from "lib/types";
 
 export const BurgerSidebar = ({
   open,

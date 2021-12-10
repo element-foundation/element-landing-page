@@ -29,7 +29,7 @@ export const StatsSection = () => {
   if (!mounted) return null;
 
   return (
-    <SectionContainer gridColumn="1/13" textAlign="start" padding="0">
+    <SectionContainer textAlign="start" padding="0">
       <Slide direction="up" duration={1500} triggerOnce>
         <MainContent darkTheme={resolvedTheme === "dark"}>
           <Flex>
@@ -57,9 +57,7 @@ export const StatsSection = () => {
           <Flex>
             <IconContainer>
               <Image
-                src={
-                  resolvedTheme === "dark" ? LiquidityDark : LiquidityLight
-                }
+                src={resolvedTheme === "dark" ? LiquidityDark : LiquidityLight}
                 alt="SVG Illustration"
               />
             </IconContainer>
@@ -73,9 +71,7 @@ export const StatsSection = () => {
           <Flex>
             <IconContainer>
               <Image
-                src={
-                  resolvedTheme === "dark" ? GlobeDark : GlobeLight
-                }
+                src={resolvedTheme === "dark" ? GlobeDark : GlobeLight}
                 alt="SVG Illustration"
               />
             </IconContainer>

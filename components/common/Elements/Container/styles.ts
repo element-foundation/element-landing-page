@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 
-export const Container = styled.div<any>`
+export const Container = styled.div<StringProps>`
   position: relative;
   width: auto;
-  max-width: ${({ width }) => (width ? width : "80rem")};
+  max-width: "80rem";
 `;
 
-export const Flex = styled.div<any>`
+export const Flex = styled.div<StringProps>`
   display: flex;
   align-items: center;
   justify-content: ${({ justify }) => (justify ? justify : "space-between")};
@@ -21,19 +22,18 @@ export const HeaderWrapper = styled.div`
   margin-left: auto;
 `;
 
-export const FlexWrap = styled.div<any>`
+export const FlexWrap = styled.div<StringProps>`
   display: flex;
   justify-content: ${({ justify }) => justify || "space-between"};
   flex-wrap: wrap;
 `;
 
-export const Section = styled("section")<any>`
+export const Section = styled("section")<StringProps>`
   display: grid;
   grid-template-columns: minmax(6rem, auto) minmax(0, 78rem) minmax(6rem, auto);
   grid-gap: calc(12rem * 0.75) 0;
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
-  overflow: hidden;
   overflow: ${({ hasOverflow }) => (!hasOverflow ? "hidden" : "initial")};
 
   @media ${devices.tabletL} {
@@ -75,7 +75,7 @@ export const SectionWrapper = styled.div`
   }
 `;
 
-export const SectionCenter = styled.div<any>`
+export const SectionCenter = styled.div<StringProps>`
   text-align: ${({ textAlign }) => textAlign || "center"};
   grid-column: ${({ gridColumn }) => gridColumn || "3 / 11"};
 

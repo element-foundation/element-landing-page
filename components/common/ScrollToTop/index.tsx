@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { useTheme } from "next-themes";
 import { getScroll } from "lib/getScroll";
 import { ScrollUpContainer } from "./styles";
@@ -53,4 +53,4 @@ const ScrollToTop = () => {
   );
 };
 
-export default ScrollToTop;
+export default memo(ScrollToTop);

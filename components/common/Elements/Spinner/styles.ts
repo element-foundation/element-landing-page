@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { COLOR_WHITE } from "lib/colorPalette";
+import { COLOR_WHITE, COLOR_BLACK } from "lib/colorPalette";
+import { StringProps } from "lib/types";
 
 const motion = () => keyframes`
   0% {
@@ -10,7 +11,7 @@ const motion = () => keyframes`
   }
 `;
 
-export const RippleSpinner = styled.div`
+export const RippleSpinner = styled.div<StringProps>`
   position: relative;
   width: 24px;
   height: 24px;
@@ -30,7 +31,8 @@ export const RippleSpinner = styled.div`
     top: 10px;
     left: 2px;
     border-radius: 40%;
-    background-color: ${COLOR_WHITE};
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? COLOR_WHITE : COLOR_BLACK};
   }
   div:nth-child(1) {
     transform: rotate(0deg);

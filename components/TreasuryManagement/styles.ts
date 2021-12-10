@@ -1,6 +1,7 @@
 import { Flex } from "components/common/Elements/Container/styles";
 import { COLOR_DARK_BLUE, COLOR_WHITE } from "lib/colorPalette";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 import styled from "styled-components";
 
 export const CircleContainer = styled.div`
@@ -46,7 +47,7 @@ export const FlexWrapper = styled(Flex)`
   }
 `;
 
-export const ContentWrapper = styled.div<any>`
+export const ContentWrapper = styled.div<StringProps>`
   max-width: 27rem;
   width: 100%;
   height: 100%;

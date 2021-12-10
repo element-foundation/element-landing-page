@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { SectionContainer } from "components/common/Elements/Container";
 import { ExternalLink } from "components/common/Elements/ExternalLink";
+import NewsLetter from "components/NewsLetter";
 import {
   FooterMain,
   Formality,
@@ -29,9 +30,10 @@ export const Footer = () => {
 
   return (
     <footer>
+      <NewsLetter />
       <StyledHTML darkTheme={resolvedTheme === "dark"} />
       <Fade duration={2500} delay={500} triggerOnce>
-        <SectionContainer gridColumn="1/13" padding="5rem 0">
+        <SectionContainer padding="5rem 0">
           <SmallScreen>
             <Image
               src={
@@ -139,7 +141,11 @@ export const Footer = () => {
                   )}
                 </svg>
               </button>
-              <ExternalLink href="https://www.producthunt.com/posts/element-finance?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-element-finance">
+              <a
+                href="https://www.producthunt.com/posts/element-finance?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-element-finance"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src={
                     resolvedTheme === "dark"
@@ -149,7 +155,7 @@ export const Footer = () => {
                   alt="Product Hunt"
                   layout="fixed"
                 />
-              </ExternalLink>
+              </a>
             </LinkContainer>
           </FooterMain>
           <Formality darkTheme={resolvedTheme === "dark"}>

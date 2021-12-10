@@ -5,15 +5,16 @@ import {
   COLOR_WHITE,
 } from "lib/colorPalette";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 import styled from "styled-components";
 
-export const VaultsContainer = styled.div<any>`
+export const VaultsContainer = styled.div<StringProps>`
   h3 {
     margin-bottom: 5rem;
   }
 `;
 
-export const GridContainer = styled.div<any>`
+export const GridContainer = styled.div<StringProps>`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 3rem 1.5rem;
@@ -31,7 +32,7 @@ export const GridContainer = styled.div<any>`
   }
 `;
 
-export const VaultsItemContainer = styled.div<any>`
+export const VaultsItemContainer = styled.div<StringProps>`
   background: ${({ darkTheme }) =>
     darkTheme
       ? `linear-gradient(

@@ -1,5 +1,11 @@
-import { COLOR_DARKER_BLUE, COLOR_DARK_BLUE, COLOR_LIGHT_BLUE, COLOR_LIGHT_FOOTER } from "lib/colorPalette";
+import {
+  COLOR_DARKER_BLUE,
+  COLOR_DARK_BLUE,
+  COLOR_LIGHT_BLUE,
+  COLOR_LIGHT_FOOTER,
+} from "lib/colorPalette";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 import styled from "styled-components";
 
 export const InvestorsWrapper = styled.div`
@@ -51,7 +57,7 @@ export const InvestorsWrapper = styled.div`
   }
 `;
 
-export const GridContainer = styled.div<any>`
+export const GridContainer = styled.div<StringProps>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem 4rem;
@@ -74,7 +80,19 @@ export const GridContainer = styled.div<any>`
   }
 `;
 
-export const CardWrapper = styled.div<any>`
+export const CardWrapper = styled.div<StringProps>`
+  * {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    p {
+      max-width: 100%;
+    }
+  }
+
   background: ${({ darkTheme }) =>
     darkTheme
       ? `linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_DARKER_BLUE})`
@@ -87,6 +105,15 @@ export const CardWrapper = styled.div<any>`
   align-items: center;
   flex-direction: column;
   position: relative;
+  transition: all ease 0.3s;
+
+  &:hover {
+    margin-top: -10px;
+    box-shadow: ${({ darkTheme }) =>
+      darkTheme
+        ? `0 0 10px 5px ${COLOR_LIGHT_BLUE}`
+        : `0 0 10px 5px ${COLOR_DARK_BLUE}`};
+  }
 
   @media ${devices.mobileL} {
     width: 75%;

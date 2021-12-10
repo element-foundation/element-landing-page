@@ -7,6 +7,7 @@ import {
   COLOR_LIGHT_BACKGROUND,
 } from "lib/colorPalette";
 import { AnimateSlideBurger } from "styles/globalStyles";
+import { StringProps } from "lib/types";
 
 export const BurgerSidebarWrapper = styled(AnimateSlideBurger)`
   width: 100%;
@@ -17,7 +18,7 @@ export const BurgerSidebarWrapper = styled(AnimateSlideBurger)`
   position: absolute;
 `;
 
-export const BurgerSidebarOverlay = styled.div<any>`
+export const BurgerSidebarOverlay = styled.div<StringProps>`
   width: 100%;
   height: 100%;
   top: 0;
@@ -32,7 +33,7 @@ export const BurgerSidebarOverlay = styled.div<any>`
   transition: all 0.25s cubic-bezier(0.8, 0, 0.2, 1);
 `;
 
-export const BurgerSidebarContainer = styled.div<any>`
+export const BurgerSidebarContainer = styled.div<StringProps>`
   display: flex;
   justify-content: space-between;
   flex-direction: column;

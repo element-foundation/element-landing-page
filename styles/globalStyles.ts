@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 
 export const GlobalStyle = createGlobalStyle`
     body {
@@ -138,7 +139,7 @@ export const AnimateSlideBurger = styled.div`
   }
 `;
 
-export const PageHideOuterScroll = createGlobalStyle<any>`
+export const PageHideOuterScroll = createGlobalStyle<StringProps>`
   body {
     overflow-y: ${(p) => (p.shouldHide ? "hidden" : "auto")};       
    

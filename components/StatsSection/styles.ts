@@ -1,6 +1,11 @@
 import { Flex } from "components/common/Elements/Container/styles";
-import { COLOR_LIGHT_BLUE, COLOR_DARK_BLUE, COLOR_DARK_GRAY } from "lib/colorPalette";
+import {
+  COLOR_LIGHT_BLUE,
+  COLOR_DARK_BLUE,
+  COLOR_DARK_GRAY,
+} from "lib/colorPalette";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 import styled from "styled-components";
 
 export const IconContainer = styled.div`
@@ -28,7 +33,7 @@ export const StatsContent = styled.div`
   }
 `;
 
-export const MainContent = styled.div<any>`
+export const MainContent = styled.div<StringProps>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;

@@ -1,8 +1,9 @@
+import { StringProps } from "lib/types";
 import { SpinnerContainer, RippleSpinner } from "./styles";
 
-export const Spinner = () => (
+export const Spinner = ({ darkTheme }: StringProps) => (
   <SpinnerContainer>
-    <RippleSpinner>
+    <RippleSpinner darkTheme={darkTheme}>
       <div />
       <div />
       <div />

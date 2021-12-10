@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { useTheme } from "next-themes";
 import { ChangeThemeContainer } from "./styles";
 
@@ -42,4 +42,4 @@ const ChangeTheme = () => {
   );
 };
 
-export default ChangeTheme;
+export default memo(ChangeTheme);

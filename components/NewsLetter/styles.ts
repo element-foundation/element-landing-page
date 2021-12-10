@@ -6,6 +6,7 @@ import {
   COLOR_WHITE,
 } from "lib/colorPalette";
 import { devices } from "lib/devices";
+import { StringProps } from "lib/types";
 import styled from "styled-components";
 
 export const Break = styled.br`
@@ -41,7 +42,7 @@ export const FlexWrapper = styled(Flex)`
   }
 `;
 
-export const NewsLetterContainer = styled.form<any>`
+export const NewsLetterContainer = styled.form<StringProps>`
   background: ${({ darkTheme }) =>
     darkTheme
       ? `linear-gradient(180deg, ${COLOR_LIGHT_BLUE}, ${COLOR_WHITE})`

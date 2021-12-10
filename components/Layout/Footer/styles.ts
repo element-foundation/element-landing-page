@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { devices } from "lib/devices";
+import { StyledAnchor } from "components/common/Elements/ExternalLink";
+import { StyledLink } from "components/Layout/Header/styles";
 import {
   COLOR_DARK_BACKGROUND,
   COLOR_DARK_BLUE,
@@ -40,12 +42,12 @@ export const FooterMain = styled.section`
   }
 `;
 
-export const Formality = styled.p<any>`
+export const Formality = styled.p<StringProps>`
   display: flex;
   color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_LIGHT_FOOTER)};
 `;
 
-export const LinkContainer = styled.div<any>`
+export const LinkContainer = styled.div<StringProps>`
   h3 {
     margin: 0 0 24px 0;
     color: ${({ darkTheme }) =>
@@ -88,6 +90,11 @@ export const LinkContainer = styled.div<any>`
 
   @media ${devices.mobileL} {
     padding-top: 3rem;
+
+    ${StyledAnchor} {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 `;
 
@@ -111,5 +118,16 @@ export const SmallScreen = styled.div`
 export const StyledHTML = createGlobalStyle<StringProps>` 
   body {
         background-color: ${({ darkTheme }) =>
-          darkTheme ? COLOR_DARK_BACKGROUND : COLOR_WHITE};   
+          darkTheme ? COLOR_DARK_BACKGROUND : COLOR_WHITE};
+    ${StyledAnchor}, ${StyledLink} {
+      p {
+        color: ${({ darkTheme }) =>
+          darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
+
+        a {
+          color: ${({ darkTheme }) =>
+            darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
+        }
+      }
+    }
 }`;

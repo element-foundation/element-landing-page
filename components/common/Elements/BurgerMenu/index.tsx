@@ -1,10 +1,5 @@
+import { BurgerMenuProps } from "lib/types";
 import { BurgerMenuContainer, FirstLine, SecondLine } from "./styles";
-
-export interface BurgerMenuProps {
-  isOpen: boolean;
-  onClick: () => void;
-  darkTheme: boolean;
-}
 
 export const BurgerMenu = ({ isOpen, onClick, darkTheme }: BurgerMenuProps) => {
   return (

@@ -1,42 +1,64 @@
 import styled from "styled-components";
 import { Flex } from "components/common/Elements/Container/styles";
 import { devices } from "lib/devices";
+import { PrimaryButtonContainer } from "components/common/Elements/Button/styles";
 import {
   COLOR_DARK_BACKGROUND_HEADER,
   COLOR_LIGHT_BLUE,
-  COLOR_DARK_GRAY,
   COLOR_WHITE,
   COLOR_LIGHT_BACKGROUND_HEADER,
   COLOR_DARK_BLUE,
 } from "lib/colorPalette";
+import { StringProps } from "lib/types";
 
 export const StyledLink = styled.div`
   p {
     display: block;
+    position: relative;
     cursor: pointer;
-    color: ${COLOR_WHITE};
     text-decoration: none;
-    margin-bottom: 1rem;
     transition: color 0.3s;
     font-size: 1rem;
-    margin: auto 12.5px;
-  }
+    max-width: max-content;
 
-  &:hover {
-    p {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+      height: 1px;
+      background-color: ${COLOR_LIGHT_BLUE};
+      transition: transform 300ms ease-in-out;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+
+    &:hover {
       color: ${COLOR_LIGHT_BLUE};
     }
+
+    &:hover:before,
+    &:focus:before {
+      transform: scaleX(1);
+    }
+  }
+
+  @media ${devices.mobileL} {
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 `;
 
-export const FixedHeader = styled.header<any>`
+export const FixedHeader = styled.header<StringProps>`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: ${({ changeColor }) => (changeColor ? "1rem 0" : "4.5rem 0")};
   z-index: 10;
-  transition: all 0.3s;
+  transition: padding 0.3s;
   background-color: ${({ darkTheme }) =>
     darkTheme ? COLOR_DARK_BACKGROUND_HEADER : COLOR_LIGHT_BACKGROUND_HEADER};
   box-shadow: ${({ changeColor }) =>
@@ -55,25 +77,25 @@ export const FixedHeader = styled.header<any>`
     padding: 0;
   }
 
-  p {
-    color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE)};
-  }
-
   hr {
     border-left-width: 2px;
     height: 24px;
     border-color: ${({ darkTheme }) =>
-      darkTheme ? COLOR_DARK_GRAY : COLOR_DARK_BLUE};
+      darkTheme ? COLOR_WHITE : COLOR_DARK_BLUE};
     margin: 0 24px 0 12px;
   }
 `;
 
 export const MenuItemContainer = styled(Flex)`
-  div {
-    transform: scale(1) !important;
+  p {
+    margin: auto 12.5px;
   }
 
-  @media (max-width: 1200px) {
+  ${PrimaryButtonContainer} {
+    padding: 12px 28px;
+  }
+
+  @media ${devices.macBookPro} {
     display: none;
   }
 `;
@@ -82,10 +104,6 @@ export const NavigationPrimary = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
-
-  div {
-    transform: scale(1) !important;
-  }
 
   hr {
     display: none;
@@ -123,7 +141,7 @@ export const NavigationPrimary = styled.div`
 export const BurgerMenuContainer = styled.div`
   display: none;
 
-  @media (max-width: 1200px) {
+  @media ${devices.macBookPro} {
     display: block;
   }
 `;
