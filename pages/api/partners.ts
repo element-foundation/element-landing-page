@@ -15,7 +15,7 @@ const partners: NextApiHandler = (req, res) => {
     {
       alTitle: "chainsafe",
       image: "/assets/svg/Investors/chainsafe.svg",
-      href: "https://uniwhales.io/",
+      href: "https://chainsafe.io/,
     },
     {
       alTitle: "gnosis",
@@ -31,16 +31,6 @@ const partners: NextApiHandler = (req, res) => {
       alTitle: "drift",
       image: "/assets/svg/Investors/drift.svg",
       href: "https://www.drift.trade/",
-    },
-    {
-      alTitle: "synthetix",
-      image: "/assets/svg/Investors/synthetix.svg",
-      href: "https://synthetix.io/",
-    },
-    {
-      alTitle: "biconomy",
-      image: "/assets/svg/Investors/biconomy.svg",
-      href: "https://www.biconomy.io/",
     },
     {
       alTitle: "antimatter",
