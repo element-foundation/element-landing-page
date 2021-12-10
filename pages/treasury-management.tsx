@@ -8,7 +8,7 @@ import VaultAnimationDark from "public/assets/lotties/VaultAnimationDark.json";
 const TreasuryManagement = () => (
   <>
     <HeroSection
-      title="Introducing Element Treasury Management"
+      title="Element Treasury Management"
       text="Element is the perfect treasury diversification solution allowing Protocols, DAOs, and organizations to earn fixed rate yield on treasury capital while maintaining the ability to exit if needed."
       buttonText="Learn more"
       buttonHref="https://app.element.fi/"
