@@ -15,7 +15,7 @@ const partners: NextApiHandler = (req, res) => {
     {
       alTitle: "chainsafe",
       image: "/assets/svg/Investors/chainsafe.svg",
-      href: "https://chainsafe.io/,
+      href: "https://chainsafe.io/",
     },
     {
       alTitle: "gnosis",
