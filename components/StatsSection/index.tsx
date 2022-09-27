@@ -32,56 +32,6 @@ export const StatsSection = () => {
     <SectionContainer textAlign="start" padding="0">
       <Slide direction="up" duration={1500} triggerOnce>
         <MainContent darkTheme={resolvedTheme === "dark"}>
-          <Flex>
-            <IconContainer>
-              <Image
-                src={
-                  resolvedTheme === "dark" ? TotalValueDark : TotalValueLight
-                }
-                alt="SVG Illustration"
-              />
-            </IconContainer>
-            <StatsContent>
-              <h2>
-                $
-                <CountUp
-                  start={0}
-                  end={(data as number) / 1000000}
-                  duration={2.3}
-                />
-                M
-              </h2>
-              <p>Total Value Locked</p>
-            </StatsContent>
-          </Flex>
-          <Flex>
-            <IconContainer>
-              <Image
-                src={resolvedTheme === "dark" ? LiquidityDark : LiquidityLight}
-                alt="SVG Illustration"
-              />
-            </IconContainer>
-            <StatsContent>
-              <h2>
-                <CountUp start={0} end={11} duration={2.3} />
-              </h2>
-              <p>Fixed Rate Assets</p>
-            </StatsContent>
-          </Flex>
-          <Flex>
-            <IconContainer>
-              <Image
-                src={resolvedTheme === "dark" ? GlobeDark : GlobeLight}
-                alt="SVG Illustration"
-              />
-            </IconContainer>
-            <StatsContent>
-              <h2>
-                <CountUp start={0} end={6} duration={2.3} />+
-              </h2>
-              <p>Wallets Supported</p>
-            </StatsContent>
-          </Flex>
         </MainContent>
       </Slide>
     </SectionContainer>
