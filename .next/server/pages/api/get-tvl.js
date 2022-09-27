@@ -13,13 +13,13 @@ exports.id = "pages/api/get-tvl";
 exports.ids = ["pages/api/get-tvl"];
 exports.modules = {
 
-/***/ "./pages/api/get-tvl.ts":
+/***/ "(api)/./pages/api/get-tvl.ts":
 /*!******************************!*\
   !*** ./pages/api/get-tvl.ts ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\nconst getTotalValueLocked = async () => {\n  return fetch(\"https://elementfi.s3.us-east-2.amazonaws.com/stats/tvl\", {});\n};\n\nasync function handler(req, res) {\n  const response = await getTotalValueLocked();\n  const {\n    tvl\n  } = await response.json();\n  return res.status(200).json(tvl);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9hcGkvZ2V0LXR2bC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBRUEsTUFBTUEsbUJBQW1CLEdBQUcsWUFBWTtBQUN0QyxTQUFPQyxLQUFLLENBQUMsd0RBQUQsRUFBMkQsRUFBM0QsQ0FBWjtBQUNELENBRkQ7O0FBSWUsZUFBZUMsT0FBZixDQUNiQyxHQURhLEVBRWJDLEdBRmEsRUFHYjtBQUNBLFFBQU1DLFFBQVEsR0FBRyxNQUFNTCxtQkFBbUIsRUFBMUM7QUFDQSxRQUFNO0FBQUVNLElBQUFBO0FBQUYsTUFBVSxNQUFNRCxRQUFRLENBQUNFLElBQVQsRUFBdEI7QUFFQSxTQUFPSCxHQUFHLENBQUNJLE1BQUosQ0FBVyxHQUFYLEVBQWdCRCxJQUFoQixDQUFxQkQsR0FBckIsQ0FBUDtBQUNEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZWxlbWVudC8uL3BhZ2VzL2FwaS9nZXQtdHZsLnRzPzAwYTIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBOZXh0QXBpUmVxdWVzdCwgTmV4dEFwaVJlc3BvbnNlIH0gZnJvbSBcIm5leHRcIjtcblxuY29uc3QgZ2V0VG90YWxWYWx1ZUxvY2tlZCA9IGFzeW5jICgpID0+IHtcbiAgcmV0dXJuIGZldGNoKFwiaHR0cHM6Ly9lbGVtZW50ZmkuczMudXMtZWFzdC0yLmFtYXpvbmF3cy5jb20vc3RhdHMvdHZsXCIsIHt9KTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIoXG4gIHJlcTogTmV4dEFwaVJlcXVlc3QsXG4gIHJlczogTmV4dEFwaVJlc3BvbnNlXG4pIHtcbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBnZXRUb3RhbFZhbHVlTG9ja2VkKCk7XG4gIGNvbnN0IHsgdHZsIH0gPSBhd2FpdCByZXNwb25zZS5qc29uKCk7XG5cbiAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5qc29uKHR2bCk7XG59XG4iXSwibmFtZXMiOlsiZ2V0VG90YWxWYWx1ZUxvY2tlZCIsImZldGNoIiwiaGFuZGxlciIsInJlcSIsInJlcyIsInJlc3BvbnNlIiwidHZsIiwianNvbiIsInN0YXR1cyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/api/get-tvl.ts\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\nconst getTotalValueLocked = async ()=>{\n    return fetch(\"https://elementfi.s3.us-east-2.amazonaws.com/stats/tvl\", {});\n};\nasync function handler(req, res) {\n    const response = await getTotalValueLocked();\n    const { tvl  } = await response.json();\n    return res.status(200).json(tvl);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvZ2V0LXR2bC50cy5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBRUEsTUFBTUEsbUJBQW1CLEdBQUcsVUFBWTtJQUN0QyxPQUFPQyxLQUFLLENBQUMsd0RBQXdELEVBQUUsRUFBRSxDQUFDLENBQUM7QUFDN0UsQ0FBQztBQUVjLGVBQWVDLE9BQU8sQ0FDbkNDLEdBQW1CLEVBQ25CQyxHQUFvQixFQUNwQjtJQUNBLE1BQU1DLFFBQVEsR0FBRyxNQUFNTCxtQkFBbUIsRUFBRTtJQUM1QyxNQUFNLEVBQUVNLEdBQUcsR0FBRSxHQUFHLE1BQU1ELFFBQVEsQ0FBQ0UsSUFBSSxFQUFFO0lBRXJDLE9BQU9ILEdBQUcsQ0FBQ0ksTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDRCxJQUFJLENBQUNELEdBQUcsQ0FBQyxDQUFDO0FBQ25DLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9lbGVtZW50Ly4vcGFnZXMvYXBpL2dldC10dmwudHM/MWZmNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgdHlwZSB7IE5leHRBcGlSZXF1ZXN0LCBOZXh0QXBpUmVzcG9uc2UgfSBmcm9tIFwibmV4dFwiO1xuXG5jb25zdCBnZXRUb3RhbFZhbHVlTG9ja2VkID0gYXN5bmMgKCkgPT4ge1xuICByZXR1cm4gZmV0Y2goXCJodHRwczovL2VsZW1lbnRmaS5zMy51cy1lYXN0LTIuYW1hem9uYXdzLmNvbS9zdGF0cy90dmxcIiwge30pO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlcihcbiAgcmVxOiBOZXh0QXBpUmVxdWVzdCxcbiAgcmVzOiBOZXh0QXBpUmVzcG9uc2Vcbikge1xuICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGdldFRvdGFsVmFsdWVMb2NrZWQoKTtcbiAgY29uc3QgeyB0dmwgfSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTtcblxuICByZXR1cm4gcmVzLnN0YXR1cygyMDApLmpzb24odHZsKTtcbn1cbiJdLCJuYW1lcyI6WyJnZXRUb3RhbFZhbHVlTG9ja2VkIiwiZmV0Y2giLCJoYW5kbGVyIiwicmVxIiwicmVzIiwicmVzcG9uc2UiLCJ0dmwiLCJqc29uIiwic3RhdHVzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/get-tvl.ts\n");
 
 /***/ })
 
@@ -27,10 +27,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 ;
 
 // load runtime
-var __webpack_require__ = require("../../webpack-runtime.js");
+var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/api/get-tvl.ts"));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/get-tvl.ts"));
 module.exports = __webpack_exports__;
 
 })();
