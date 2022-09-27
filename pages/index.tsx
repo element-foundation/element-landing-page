@@ -50,7 +50,6 @@ const Home = () => (
       lightLottie={BuildAnimationDark}
     />
     <TreasuryManagement />
-    <Investors title="Our investors" type="investors" />
   </>
 );
 

@@ -23,37 +23,37 @@ import { VaultProps } from "lib/types";
 
 const vaultData = [
   {
-    currencyTitle: "TriCrypto",
+    currencyTitle: "Balancer",
     currencyImage: Currencies,
     currencyRainbow: true,
     currencyReturn: false,
   },
   {
-    currencyTitle: "Wrapped Bitcoin",
+    currencyTitle: "Maker",
     currencyImage: Bitcoin,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "USDC",
+    currencyTitle: "Lido",
     currencyImage: USDC,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "DAI",
+    currencyTitle: "Curve",
     currencyImage: DAI,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "LUSD",
+    currencyTitle: "Aztec",
     currencyImage: LUSD,
     currencyRainbow: true,
     currencyReturn: false,
   },
   {
-    currencyTitle: "steCRV",
+    currencyTitle: "replace",
     currencyImage: ETH,
     currencyRainbow: true,
     currencyReturn: true,
@@ -81,7 +81,7 @@ export const OurVaults = () => {
         <Fade duration={2500} delay={200} triggerOnce>
           <VaultsContainer darkTheme={resolvedTheme === "dark"}>
             <SectionTitle darkTheme={resolvedTheme === "dark"}>
-              Our vaults
+              Our Integrations
             </SectionTitle>
             <GridContainer>
               {vaultData.map((item: VaultProps, id: number) => {

@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/api/get-tvl": "pages/api/get-tvl.js",
-  "/api/investors": "pages/api/investors.js"
+  "/api/get-tvl": "pages/api/get-tvl.js"
 }
