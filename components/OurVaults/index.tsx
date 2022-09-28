@@ -19,44 +19,51 @@ import ETH from "public/assets/svg/Currencies/ETH.svg";
 import USDC from "public/assets/svg/Currencies/USDC.svg";
 import DAI from "public/assets/svg/Currencies/DAI.svg";
 import LUSD from "public/assets/svg/Currencies/LUSD.svg";
+
+import Balancer from "public/assets/png/Integrations/Balancer.png";
+import Maker from "public/assets/png/Integrations/Maker.png";
+import Lido from "public/assets/png/Integrations/Lido.png";
+import Curve from "public/assets/png/Integrations/Curve.jpeg";
+import Aztec from "public/assets/png/Integrations/Aztec.png";
+
 import { VaultProps } from "lib/types";
 
 const vaultData = [
   {
     currencyTitle: "Balancer",
-    currencyImage: Currencies,
-    currencyRainbow: true,
+    currencyImage: Balancer,
+    currencyRainbow: false,
     currencyReturn: false,
   },
   {
     currencyTitle: "Maker",
-    currencyImage: Bitcoin,
+    currencyImage: Maker,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Lido",
-    currencyImage: USDC,
+    currencyImage: Lido,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Curve",
-    currencyImage: DAI,
+    currencyImage: Curve,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Aztec",
-    currencyImage: LUSD,
-    currencyRainbow: true,
+    currencyImage: Aztec,
+    currencyRainbow: false,
     currencyReturn: false,
   },
   {
     currencyTitle: "replace",
-    currencyImage: ETH,
-    currencyRainbow: true,
-    currencyReturn: true,
+    currencyImage: Balancer,
+    currencyRainbow: false,
+    currencyReturn: false,
   },
 ];
 
