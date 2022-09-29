@@ -20,50 +20,44 @@ import USDC from "public/assets/svg/Currencies/USDC.svg";
 import DAI from "public/assets/svg/Currencies/DAI.svg";
 import LUSD from "public/assets/svg/Currencies/LUSD.svg";
 
-import Balancer from "public/assets/png/integrations/balancer.png";
-import Curve from "public/assets/png/integrations/curve.png";
-import Lido from "public/assets/png/integrations/lido.png";
-import Maker from "public/assets/png/integrations/maker.png";
-import Aztec from "public/assets/png/integrations/aztec.png";
+import Balancer from "public/assets/png/integrations-white/balancer.png";
+import Curve from "public/assets/png/integrations-white/curve.png";
+import Lido from "public/assets/png/integrations-white/lido.png";
+import Maker from "public/assets/png/integrations-white/maker.png";
+import Aztec from "public/assets/png/integrations-white/aztec.png";
 import { VaultProps } from "lib/types";
 
 const vaultData = [
   {
     currencyTitle: "Balancer",
     currencyImage: Balancer,
-    currencyRainbow: true,
+    currencyRainbow: false,
     currencyReturn: false,
   },
   {
     currencyTitle: "Curve",
     currencyImage: Curve,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Lido",
     currencyImage: Lido,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Maker",
     currencyImage: Maker,
     currencyRainbow: false,
-    currencyReturn: true,
+    currencyReturn: false,
   },
   {
     currencyTitle: "Aztec",
     currencyImage: Aztec,
-    currencyRainbow: true,
+    currencyRainbow: false,
     currencyReturn: false,
-  },
-  {
-    currencyTitle: "replace",
-    currencyImage: Balancer,
-    currencyRainbow: true,
-    currencyReturn: true,
-  },
+  }
 ];
 
 export const OurVaults = () => {
