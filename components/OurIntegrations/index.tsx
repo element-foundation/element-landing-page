@@ -60,7 +60,7 @@ const integrationData = [
     currencyReturn: false,
   },
   {
-    currencyTitle: "Compound (coming soon)",
+    currencyTitle: "Compound (soon)",
     currencyImage: Compound,
     currencyRainbow: false,
     currencyReturn: false,

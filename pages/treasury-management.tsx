@@ -36,7 +36,6 @@ const TreasuryManagement = () => (
       // darkLottie={}
       // lightLottie={}
     />
-    <Investors title="Our Partners" type="partners" />
   </>
 );
 
