@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { VaultsItem } from "components/OurVaults/VaultsItem";
+import { IntegrationItem } from "components/OurIntegrations/IntegrationItem";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
@@ -10,8 +10,8 @@ import {
 import {
   GridContainer,
   ValuesWrapper,
-  VaultsContainer,
-} from "components/OurVaults/styles";
+  IntegrationContainer,
+} from "components/OurIntegrations/styles";
 
 import Currencies from "public/assets/svg/Currencies/Currencies.svg";
 import Bitcoin from "public/assets/svg/Currencies/BTC.svg";
@@ -26,9 +26,9 @@ import Lido from "public/assets/png/integrations-white/lido.png";
 import Maker from "public/assets/png/integrations-white/maker.png";
 import Aztec from "public/assets/png/integrations-white/aztec.png";
 import Compound from "public/assets/png/integrations-white/compound.png";
-import { VaultProps } from "lib/types";
+import { IntegrationProps } from "lib/types";
 
-const vaultData = [
+const integrationData = [
   {
     currencyTitle: "Balancer",
     currencyImage: Balancer,
@@ -67,7 +67,7 @@ const vaultData = [
   }
 ];
 
-export const OurVaults = () => {
+export const OurIntegrations = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   useEffect(() => setMounted(true), []);
@@ -86,14 +86,14 @@ export const OurVaults = () => {
       </AbsoluteSVGContainer>
       <SectionContainer padding="0">
         <Fade duration={2500} delay={200} triggerOnce>
-          <VaultsContainer darkTheme={resolvedTheme === "dark"}>
+          <IntegrationContainer darkTheme={resolvedTheme === "dark"}>
             <SectionTitle darkTheme={resolvedTheme === "dark"}>
               Our Integrations
             </SectionTitle>
             <GridContainer>
-              {vaultData.map((item: VaultProps, id: number) => {
+              {integrationData.map((item: IntegrationProps, id: number) => {
                 return (
-                  <VaultsItem
+                  <IntegrationItem
                     key={id}
                     item={item}
                     darkTheme={resolvedTheme === "dark"}
@@ -101,7 +101,7 @@ export const OurVaults = () => {
                 );
               })}
             </GridContainer>
-          </VaultsContainer>
+          </IntegrationContainer>
         </Fade>
       </SectionContainer>
       <AbsoluteSVGContainer

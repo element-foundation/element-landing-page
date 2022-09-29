@@ -8,7 +8,7 @@ import { devices } from "lib/devices";
 import { StringProps } from "lib/types";
 import styled from "styled-components";
 
-export const VaultsContainer = styled.div<StringProps>`
+export const IntegrationContainer = styled.div<StringProps>`
   h3 {
     margin-bottom: 5rem;
   }
@@ -32,7 +32,7 @@ export const GridContainer = styled.div<StringProps>`
   }
 `;
 
-export const VaultsItemContainer = styled.div<StringProps>`
+export const IntegrationItemContainer = styled.div<StringProps>`
   background: ${({ darkTheme }) =>
     darkTheme
       ? `linear-gradient(

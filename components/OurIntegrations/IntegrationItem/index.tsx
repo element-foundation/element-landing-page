@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { Flex } from "components/common/Elements/Container/styles";
 import { AbsoluteSVGContainer } from "components/LeftSection/styles";
-import { VaultsItemContainer } from "components/OurVaults/styles";
-import { VaultProps } from "lib/types";
+import { IntegrationItemContainer } from "components/OurIntegrations/styles";
+import { IntegrationProps } from "lib/types";
 
 import Rainbow from "public/assets/svg/Currencies/Rainbow.svg";
 import Return from "public/assets/png/Currencies/Return.png";
 
-export const VaultsItem = ({ item, darkTheme }: VaultProps) => {
+export const IntegrationItem = ({ item, darkTheme }: IntegrationProps) => {
   return (
-    <VaultsItemContainer darkTheme={darkTheme}>
+    <IntegrationItemContainer darkTheme={darkTheme}>
       <AbsoluteSVGContainer top="11px" right="11px">
         <Flex>
           {item.currencyReturn && (
@@ -41,6 +41,6 @@ export const VaultsItem = ({ item, darkTheme }: VaultProps) => {
         />
       )}
       <p>{item.currencyTitle}</p>
-    </VaultsItemContainer>
+    </IntegrationItemContainer>
   );
 };

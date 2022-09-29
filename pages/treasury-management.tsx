@@ -3,7 +3,7 @@ import RightSection from "components/RightSection";
 import HeroSection from "components/HeroSection";
 import { Investors } from "components/Investors";
 
-import VaultAnimationDark from "public/assets/lotties/VaultAnimationDark.json";
+import IntegrationAnimationDark from "public/assets/lotties/IntegrationAnimationDark.json";
 
 const TreasuryManagement = () => (
   <>
@@ -13,8 +13,8 @@ const TreasuryManagement = () => (
       buttonText="Learn more"
       buttonHref="https://medium.com/element-finance/introducing-elements-treasury-management-initiative-bbebbd99f89"
       hasArrow
-      darkLottie={VaultAnimationDark}
-      lightLottie={VaultAnimationDark}
+      darkLottie={IntegrationAnimationDark}
+      lightLottie={IntegrationAnimationDark}
     />
     <RightSection
       title="Grow Your Capital"
