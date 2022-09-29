@@ -25,7 +25,7 @@ import Curve from "public/assets/png/integrations-white/curve.png";
 import Lido from "public/assets/png/integrations-white/lido.png";
 import Maker from "public/assets/png/integrations-white/maker.png";
 import Aztec from "public/assets/png/integrations-white/aztec.png";
-import Compound from "public/assets/png/integrations-white/aztec.png";
+import Compound from "public/assets/png/integrations-white/compound.png";
 import { VaultProps } from "lib/types";
 
 const vaultData = [
@@ -60,7 +60,7 @@ const vaultData = [
     currencyReturn: false,
   },
   {
-    currencyTitle: "Compound (coming soon)s",
+    currencyTitle: "Compound (coming soon)",
     currencyImage: Compound,
     currencyRainbow: false,
     currencyReturn: false,
