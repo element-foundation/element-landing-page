@@ -19,42 +19,48 @@ import ETH from "public/assets/svg/Currencies/ETH.svg";
 import USDC from "public/assets/svg/Currencies/USDC.svg";
 import DAI from "public/assets/svg/Currencies/DAI.svg";
 import LUSD from "public/assets/svg/Currencies/LUSD.svg";
+
+import Balancer from "public/assets/png/integrations/balancer.png";
+import Curve from "public/assets/png/integrations/curve.png";
+import Lido from "public/assets/png/integrations/lido.png";
+import Maker from "public/assets/png/integrations/maker.png";
+import Aztec from "public/assets/png/integrations/aztec.png";
 import { VaultProps } from "lib/types";
 
 const vaultData = [
   {
-    currencyTitle: "TriCrypto",
-    currencyImage: Currencies,
+    currencyTitle: "Balancer",
+    currencyImage: Balancer,
     currencyRainbow: true,
     currencyReturn: false,
   },
   {
-    currencyTitle: "Wrapped Bitcoin",
-    currencyImage: Bitcoin,
+    currencyTitle: "Curve",
+    currencyImage: Curve,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "USDC",
-    currencyImage: USDC,
+    currencyTitle: "Lido",
+    currencyImage: Lido,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "DAI",
-    currencyImage: DAI,
+    currencyTitle: "Maker",
+    currencyImage: Maker,
     currencyRainbow: false,
     currencyReturn: true,
   },
   {
-    currencyTitle: "LUSD",
-    currencyImage: LUSD,
+    currencyTitle: "Aztec",
+    currencyImage: Aztec,
     currencyRainbow: true,
     currencyReturn: false,
   },
   {
-    currencyTitle: "steCRV",
-    currencyImage: ETH,
+    currencyTitle: "replace",
+    currencyImage: Balancer,
     currencyRainbow: true,
     currencyReturn: true,
   },
@@ -81,7 +87,7 @@ export const OurVaults = () => {
         <Fade duration={2500} delay={200} triggerOnce>
           <VaultsContainer darkTheme={resolvedTheme === "dark"}>
             <SectionTitle darkTheme={resolvedTheme === "dark"}>
-              Our vaults
+              Our Integrations
             </SectionTitle>
             <GridContainer>
               {vaultData.map((item: VaultProps, id: number) => {
