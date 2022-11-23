@@ -2,7 +2,7 @@ import HeroSection from "components/HeroSection";
 import { StatsSection } from "components/StatsSection";
 import LeftSection from "components/LeftSection";
 import { Proposition } from "components/Proposition";
-import { OurVaults } from "components/OurVaults";
+import { OurIntegrations } from "components/OurIntegrations";
 import RightSection from "components/RightSection";
 import { TreasuryManagement } from "components/TreasuryManagement";
 import { Investors } from "components/Investors";
@@ -37,7 +37,7 @@ const Home = () => (
       lightLottie={GrowSavingAnimationDark}
     />
     <Proposition />
-    <OurVaults />
+    <OurIntegrations />
     <RightSection
       title="Build on Element"
       text="Develop new defi products with the Element SDK. Whether it’s a
@@ -50,7 +50,6 @@ const Home = () => (
       lightLottie={BuildAnimationDark}
     />
     <TreasuryManagement />
-    <Investors title="Our investors" type="investors" />
   </>
 );
 

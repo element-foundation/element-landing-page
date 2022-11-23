@@ -64,15 +64,15 @@ We can also choose to add an arrow on the button by providing `hasArrow` propert
 Finally, we have lotties. Always add a new lottie json file inside the ` public/assets/lotties/` folders, to maintain the structure always always import it from the same path, like so:
 
 ```sh
-import VaultAnimationDark from "public/assets/lotties/VaultAnimationDark.json";
+import IntegrationAnimationDark from "public/assets/lotties/IntegrationAnimationDark.json";
 ```
 
 As the website is both dark and light themed, we need to provide both of these values:
 
 ```sh
 <LeftSection
-  darkLottie={VaultAnimatioLight}
-  lightLottie={VaultAnimationDark}
+  darkLottie={IntegrationAnimationDark}
+  lightLottie={IntegrationAnimationDark}
 />
 ```
 
@@ -80,8 +80,8 @@ If there is no light/dark themed lottie, you SHOULD assign both values to the sa
 
 ```sh
 <LeftSection
-  darkLottie={VaultAnimationDark}
-  lightLottie={VaultAnimationDark}
+  darkLottie={IntegrationAnimationDark}
+  lightLottie={IntegrationAnimationDark}
 />
 ```
 

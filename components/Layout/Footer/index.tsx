@@ -101,8 +101,8 @@ export const Footer = () => {
               <ExternalLink href="https://twitter.com/element_fi">
                 Twitter
               </ExternalLink>
-              <ExternalLink href="https://medium.com/element-finance">
-                Medium
+              <ExternalLink href="https://blog.element.fi">
+                Blog
               </ExternalLink>
               <ExternalLink href="https://github.com/element-fi">
                 Github

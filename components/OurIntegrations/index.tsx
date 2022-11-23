@@ -1,7 +1,7 @@
 import { Fade } from "react-awesome-reveal";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { VaultsItem } from "components/OurVaults/VaultsItem";
+import { IntegrationItem } from "components/OurIntegrations/IntegrationItem";
 import { SectionContainer } from "components/common/Elements/Container";
 import {
   AbsoluteSVGContainer,
@@ -10,8 +10,8 @@ import {
 import {
   GridContainer,
   ValuesWrapper,
-  VaultsContainer,
-} from "components/OurVaults/styles";
+  IntegrationContainer,
+} from "components/OurIntegrations/styles";
 
 import Currencies from "public/assets/svg/Currencies/Currencies.svg";
 import Bitcoin from "public/assets/svg/Currencies/BTC.svg";
@@ -19,48 +19,55 @@ import ETH from "public/assets/svg/Currencies/ETH.svg";
 import USDC from "public/assets/svg/Currencies/USDC.svg";
 import DAI from "public/assets/svg/Currencies/DAI.svg";
 import LUSD from "public/assets/svg/Currencies/LUSD.svg";
-import { VaultProps } from "lib/types";
 
-const vaultData = [
+import Balancer from "public/assets/png/integrations-white/balancer.png";
+import Curve from "public/assets/png/integrations-white/curve.png";
+import Lido from "public/assets/png/integrations-white/lido.png";
+import Maker from "public/assets/png/integrations-white/maker.png";
+import Aztec from "public/assets/png/integrations-white/aztec.png";
+import Compound from "public/assets/png/integrations-white/compound.png";
+import { IntegrationProps } from "lib/types";
+
+const integrationData = [
   {
-    currencyTitle: "TriCrypto",
-    currencyImage: Currencies,
-    currencyRainbow: true,
+    currencyTitle: "Balancer",
+    currencyImage: Balancer,
+    currencyRainbow: false,
     currencyReturn: false,
   },
   {
-    currencyTitle: "Wrapped Bitcoin",
-    currencyImage: Bitcoin,
+    currencyTitle: "Curve",
+    currencyImage: Curve,
     currencyRainbow: false,
-    currencyReturn: true,
-  },
-  {
-    currencyTitle: "USDC",
-    currencyImage: USDC,
-    currencyRainbow: false,
-    currencyReturn: true,
-  },
-  {
-    currencyTitle: "DAI",
-    currencyImage: DAI,
-    currencyRainbow: false,
-    currencyReturn: true,
-  },
-  {
-    currencyTitle: "LUSD",
-    currencyImage: LUSD,
-    currencyRainbow: true,
     currencyReturn: false,
   },
   {
-    currencyTitle: "steCRV",
-    currencyImage: ETH,
-    currencyRainbow: true,
-    currencyReturn: true,
+    currencyTitle: "Lido",
+    currencyImage: Lido,
+    currencyRainbow: false,
+    currencyReturn: false,
   },
+  {
+    currencyTitle: "Maker",
+    currencyImage: Maker,
+    currencyRainbow: false,
+    currencyReturn: false,
+  },
+  {
+    currencyTitle: "Aztec",
+    currencyImage: Aztec,
+    currencyRainbow: false,
+    currencyReturn: false,
+  },
+  {
+    currencyTitle: "Compound (soon)",
+    currencyImage: Compound,
+    currencyRainbow: false,
+    currencyReturn: false,
+  }
 ];
 
-export const OurVaults = () => {
+export const OurIntegrations = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   useEffect(() => setMounted(true), []);
@@ -79,14 +86,14 @@ export const OurVaults = () => {
       </AbsoluteSVGContainer>
       <SectionContainer padding="0">
         <Fade duration={2500} delay={200} triggerOnce>
-          <VaultsContainer darkTheme={resolvedTheme === "dark"}>
+          <IntegrationContainer darkTheme={resolvedTheme === "dark"}>
             <SectionTitle darkTheme={resolvedTheme === "dark"}>
-              Our vaults
+              Our Integrations
             </SectionTitle>
             <GridContainer>
-              {vaultData.map((item: VaultProps, id: number) => {
+              {integrationData.map((item: IntegrationProps, id: number) => {
                 return (
-                  <VaultsItem
+                  <IntegrationItem
                     key={id}
                     item={item}
                     darkTheme={resolvedTheme === "dark"}
@@ -94,7 +101,7 @@ export const OurVaults = () => {
                 );
               })}
             </GridContainer>
-          </VaultsContainer>
+          </IntegrationContainer>
         </Fade>
       </SectionContainer>
       <AbsoluteSVGContainer

@@ -45,7 +45,7 @@ export interface BurgerSidebarProps {
   darkTheme: boolean;
 }
 
-export interface VaultProps {
+export interface IntegrationProps {
   [name: string]: any;
   darkTheme?: boolean;
 }
